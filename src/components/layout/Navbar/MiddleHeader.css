@@ -1,0 +1,101 @@
+.middle-header {
+  background-color: #fff;
+  padding: 1.5rem 0;
+}
+
+.middle-header__flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle-header__logo,
+.middle-header__icons {
+  flex: 0.25;
+}
+
+.middle-header__searchbar {
+  flex: 0.5;
+}
+
+.middle-header__logo a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: var(--primary-color);
+}
+
+.middle-header__logo-dark {
+  color: var(--tertiary-color);
+}
+
+.middle-header__searchbar form {
+  background-color: #fff;
+  height: 42px;
+  display: flex;
+  border-radius: 1000px;
+  border: 2px solid var(--primary-color);
+}
+
+.middle-header__searchbar form input {
+  padding: 10px 30px;
+  width: 100%;
+  height: 38px;
+  font-size: 0.88rem;
+  border: none;
+  border-radius: inherit;
+  flex: 1;
+  outline-width: 0;
+}
+
+.middle-header__searchbar form button {
+  width: 55px;
+  display: block;
+  transform: translateX(2px);
+  border: 1px solid var(--primary-color);
+  border-radius: 0 25px 25px 0;
+  background: var(--primary-color);
+}
+
+.middle-header__searchbar form button i {
+  font-size: 18px;
+  color: #fff;
+}
+
+.middle-header__icons ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: flex-end;
+}
+
+.middle-header__icons ul li {
+  margin-left: 15%;
+}
+
+.middle-header__icons ul li a {
+  color: var(--tertiary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.middle-header__icons ul li:first-child {
+  margin-left: 0;
+}
+
+.middle-header__shoppingbag {
+  display: flex;
+  align-items: center;
+}
+
+.middle-header__shoppingbag img {
+  height: 24px;
+  width: 24px;
+  margin-right: 7px;
+}
+
+.middle-header__shoppingbag span {
+  font-size: 0.8rem;
+  padding-top: 4px;
+}
