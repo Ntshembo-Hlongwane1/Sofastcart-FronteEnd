@@ -56,6 +56,11 @@
   border: 1px solid var(--primary-color);
   border-radius: 0 25px 25px 0;
   background: var(--primary-color);
+  outline-width: 0;
+}
+
+.middle-header__searchbar form button:hover {
+  opacity: 0.9;
 }
 
 .middle-header__searchbar form button i {
@@ -95,7 +100,44 @@
   margin-right: 7px;
 }
 
-.middle-header__shoppingbag span {
+.middle-header__cartprice {
   font-size: 0.8rem;
   padding-top: 4px;
+  margin-left: 4px;
+}
+
+.icon-badge__container {
+  position: relative;
+}
+
+.icon-badge__container:hover .icon-badge {
+  animation: bounce 1s ease-out infinite normal;
+}
+
+.icon-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }

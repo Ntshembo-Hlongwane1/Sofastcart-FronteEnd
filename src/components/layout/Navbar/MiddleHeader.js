@@ -25,18 +25,24 @@ const MiddleHeader = () => {
           <ul>
             <li>
               <a href="!#">
-                <i className="far fa-heart"></i>
-              </a>
-            </li>
-            <li>
-              <a href="!#">
                 <i className="far fa-user"></i>
               </a>
             </li>
             <li>
+              <a href="!#">
+                <div className="icon-badge__container">
+                  <i className="far fa-heart"></i>
+                  <span className="icon-badge">0</span>
+                </div>
+              </a>
+            </li>
+            <li>
               <a className="middle-header__shoppingbag" href="!#">
-                <img src={shoppingbag} alt="shopping bag icons" />
-                <span>$0.00</span>
+                <div className="icon-badge__container">
+                  <img src={shoppingbag} alt="shopping bag icons" />
+                  <span className="icon-badge">0</span>
+                </div>
+                <span className="middle-header__cartprice">$0.00</span>
               </a>
             </li>
           </ul>
