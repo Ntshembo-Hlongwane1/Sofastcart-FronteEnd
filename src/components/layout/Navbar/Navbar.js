@@ -5,11 +5,11 @@ import TopHeader from "./TopHeader";
 import MiddleHeader from "./MiddleHeader";
 import BottomHeader from "./BottomHeader";
 
-const Navbar = () => {
+const Navbar = ({ hamClicked }) => {
   return (
     <div className="navigationbar">
       <TopHeader />
-      <MiddleHeader />
+      <MiddleHeader clicked={hamClicked} />
       <BottomHeader />
     </div>
   );

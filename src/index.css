@@ -82,6 +82,6 @@ img {
 
 @media (max-width: 992px) {
   .customer_container {
-    max-width: 970px;
+    max-width: 800px;
   }
 }

@@ -29,7 +29,7 @@ const BottomHeader = () => {
           >
             <ul className="vertical-menu__dropdown">
               {verticalMenuItems.map((item) => (
-                <li>
+                <li key={item.title}>
                   <a href={item.link}>
                     <span>{item.title}</span>
                   </a>
@@ -42,13 +42,18 @@ const BottomHeader = () => {
                   {item.sub && (
                     <div className="row vertical-menu__sublist">
                       {item.sub.map((subitem) => (
-                        <div className={`col-1-${item.sub.length}`}>
+                        <div
+                          className={`col-1-${item.sub.length}`}
+                          key={subitem.heading}
+                        >
                           <h3 className="vertical-menu__sublist-title">
                             {subitem.heading}
                           </h3>
 
                           {subitem.titles.map((title) => (
-                            <a href={title.link}>{title.title}</a>
+                            <a href={title.link} key={title.title}>
+                              {title.title}
+                            </a>
                           ))}
                         </div>
                       ))}

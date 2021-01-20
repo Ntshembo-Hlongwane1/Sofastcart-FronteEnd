@@ -1,5 +1,5 @@
-import "./TopHeader.css";
 import ReactCountryFlag from "react-country-flag";
+import "./TopHeader.css";
 
 const TopHeader = () => {
   return (
@@ -40,7 +40,7 @@ const TopHeader = () => {
                 <ReactCountryFlag
                   countryCode="PK"
                   svg
-                  title="US"
+                  title="Pakistan"
                   style={{ width: "100%", height: "100%" }}
                 />
               </div>

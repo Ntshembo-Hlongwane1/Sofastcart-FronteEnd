@@ -64,3 +64,9 @@
 .top-header__countryflag img {
   border-radius: 50%;
 }
+
+@media (max-width: 992px) {
+  .top-header {
+    display: none;
+  }
+}

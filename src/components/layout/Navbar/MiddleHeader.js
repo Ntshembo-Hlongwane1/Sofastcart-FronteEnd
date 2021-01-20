@@ -1,15 +1,31 @@
 import "./MiddleHeader.css";
 import shoppingbag from "../../../assets/shopping-bag.svg";
 
-const MiddleHeader = () => {
+const MiddleHeader = ({ clicked }) => {
   return (
     <div className="middle-header">
       <div className="customer_container middle-header__flexbox">
+        <div className="mobile-hamburger" onClick={clicked}>
+          <i className="fas fa-bars"></i>
+        </div>
         <div className="middle-header__logo">
           <a href="!#">
             <span className="middle-header__logo-dark">Sofast</span>Cart
             <span className="middle-header__logo-dot">.</span>
           </a>
+        </div>
+
+        <div className="middle-header__mobile-searchbar">
+          <i className="fas fa-search"></i>
+          <div>
+            <a className="middle-header__mobile-shoppingbag" href="!#">
+              <div className="icon-badge__container">
+                <img src={shoppingbag} alt="shopping bag icons" />
+                <span className="icon-badge">0</span>
+              </div>
+              <span className="middle-header__cartprice">$0.00</span>
+            </a>
+          </div>
         </div>
 
         <div className="middle-header__searchbar">
