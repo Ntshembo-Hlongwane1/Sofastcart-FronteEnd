@@ -4,7 +4,7 @@ import shoppingbag from "../../../assets/shopping-bag.svg";
 const MiddleHeader = () => {
   return (
     <div className="middle-header">
-      <div className="container middle-header__flexbox">
+      <div className="customer_container middle-header__flexbox">
         <div className="middle-header__logo">
           <a href="!#">
             <span className="middle-header__logo-dark">Sofast</span>Cart

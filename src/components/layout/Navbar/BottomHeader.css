@@ -1,0 +1,137 @@
+.bottom-header {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: #fff;
+}
+
+.bottom-header__flexbox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.bottom-header__vertical-nav {
+  flex: 0.24;
+  margin-right: 15px;
+  position: relative;
+}
+
+.bottom-header__horizontal-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-header__horizontal-nav {
+  flex: 0.76;
+  margin-left: 15px;
+  display: flex;
+}
+
+.bottom-header__horizontal-navitems {
+  display: flex;
+  list-style: none;
+}
+
+.bottom-header__navitem {
+  padding: 10px 13px;
+  position: relative;
+}
+
+.bottom-header__navitem:hover .catalog__menu {
+  display: block;
+}
+
+.bottom-header__navitem:first-child {
+  padding-left: 0;
+}
+
+.bottom-header__navitem a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.bottom-header__navitem a i {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.6rem;
+}
+
+.bottom-header__alldepartments {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  color: var(--tertiary-color);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.bottom-header__alldepartments i {
+  margin-right: 15px;
+}
+
+.bottom-header__navlist {
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 10;
+}
+
+.vertical-menu__dropdown {
+  list-style: none;
+  position: relative;
+}
+
+.vertical-menu__dropdown li {
+  padding: 0 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vertical-menu__dropdown li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.vertical-menu__dropdown li:hover > .vertical-menu__sublist {
+  display: flex;
+}
+
+.vertical-menu__dropdown li a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+  display: inline-block;
+  padding: 7.4px 0;
+}
+
+.vertical-menu__sublist {
+  height: 100%;
+  width: auto;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid var(--primary-color);
+  border-radius: 0 0 10px 10px;
+}
+
+.vertical-menu__sublist-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.vertical-menu__sublist div a {
+  width: 100%;
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.vertical-menu__sublist div a:hover {
+  text-decoration: underline;
+}

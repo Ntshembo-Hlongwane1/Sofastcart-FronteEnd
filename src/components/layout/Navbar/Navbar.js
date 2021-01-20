@@ -7,7 +7,7 @@ import BottomHeader from "./BottomHeader";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navigationbar">
       <TopHeader />
       <MiddleHeader />
       <BottomHeader />
