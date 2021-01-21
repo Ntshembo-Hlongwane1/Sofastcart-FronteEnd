@@ -77,13 +77,17 @@ const SideDrawer = ({ show, bgClicked }) => {
                     <span>{item.title}</span>
                   </button>
                   {item.sub.map((subitem) => (
-                    <div key={subitem.heading}>
+                    <div key={subitem.heading} className="sublist__item">
                       <h3 className="sidedrawer__sublist-title">
                         {subitem.heading}
                       </h3>
 
                       {subitem.titles.map((title) => (
-                        <a href={title.link} key={title.title}>
+                        <a
+                          href={title.link}
+                          key={title.title}
+                          className="sublist__links"
+                        >
                           {title.title}
                         </a>
                       ))}

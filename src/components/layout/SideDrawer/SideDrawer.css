@@ -131,9 +131,11 @@
   transform: translateX(2000px);
   height: 100vh;
   background-color: #fff;
+  overflow-y: auto;
 }
 
 .sidedrawer__sublist button {
+  outline-width: 0;
   border: none;
   padding: 10px 20px;
   display: block;
@@ -142,18 +144,35 @@
   color: var(--tertiary-color);
   font-size: 1rem;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  text-align: center;
+}
+
+.sidedrawer__sublist button span {
+  flex: 1;
 }
 
 .sidedrawer__sublist button i {
-  margin-right: 15px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .sidedrawer__menuitem.active > .sidedrawer__sublist {
   transform: translateX(0);
+}
+
+.sublist__item {
+  padding: 10px 20px;
+}
+
+.sidedrawer__sublist-title {
+  margin-bottom: 0.8rem;
+}
+
+.sublist__links {
+  padding: 3px 10px;
+}
+
+.sublist__links:hover {
+  text-decoration: underline;
 }
 
 .show {
