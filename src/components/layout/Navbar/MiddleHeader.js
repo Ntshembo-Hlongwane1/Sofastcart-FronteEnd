@@ -1,7 +1,23 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./MiddleHeader.css";
 import shoppingbag from "../../../assets/shopping-bag.svg";
 
 const MiddleHeader = ({ clicked }) => {
+  const [searchResult, setSearchResult] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [mobileSearchToggle, setMobileSearchToggle] = useState(false);
+
+  const onSearchHandler = () => {
+    //TODO: make axios request to search route
+    // TODO: populate setSearchResult with axios results
+    setSearchResult([
+      "Search Result #1",
+      "Search Result #2",
+      "Search Result #3",
+    ]);
+  };
+
   return (
     <div className="middle-header">
       <div className="customer_container middle-header__flexbox">
@@ -9,14 +25,19 @@ const MiddleHeader = ({ clicked }) => {
           <i className="fas fa-bars"></i>
         </div>
         <div className="middle-header__logo">
-          <a href="!#">
+          <Link to="/">
             <span className="middle-header__logo-dark">Sofast</span>Cart
             <span className="middle-header__logo-dot">.</span>
-          </a>
+          </Link>
         </div>
 
-        <div className="middle-header__mobile-searchbar">
-          <i className="fas fa-search"></i>
+        <div className="middle-header__mobile-searchicon">
+          <i
+            className={`${
+              mobileSearchToggle ? "fas fa-times" : "fas fa-search"
+            }`}
+            onClick={() => setMobileSearchToggle(!mobileSearchToggle)}
+          ></i>
           <div>
             <a className="middle-header__mobile-shoppingbag" href="!#">
               <div className="icon-badge__container">
@@ -28,13 +49,64 @@ const MiddleHeader = ({ clicked }) => {
           </div>
         </div>
 
+        {mobileSearchToggle && (
+          <div className="middle-header__mobile-searchbar">
+            <div className="customer_container">
+              <form>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  value={searchTerm}
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    onSearchHandler();
+                  }}
+                />
+                <button type="submit">
+                  <i className="fas fa-search"></i>
+                </button>
+              </form>
+              {searchResult.length > 0 && searchTerm && (
+                <div className="middle-header__mobile-search-results">
+                  <ul className="middle-header__search-result-list">
+                    {searchResult.map((result) => (
+                      <li key={result}>
+                        <a href="!#">{result}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className="middle-header__searchbar">
           <form>
-            <input type="text" placeholder="Search" />
-            <button>
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                onSearchHandler();
+              }}
+            />
+            <button type="submit">
               <i className="fas fa-search"></i>
             </button>
           </form>
+          {searchResult.length > 0 && searchTerm && (
+            <div className="middle-header__search-results">
+              <ul className="middle-header__search-result-list">
+                {searchResult.map((result) => (
+                  <li key={result}>
+                    <a href="!#">{result}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <div className="middle-header__icons">

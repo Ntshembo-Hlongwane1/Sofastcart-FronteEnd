@@ -1,0 +1,26 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 5px 0;
+}
+
+.breadcrumbItem {
+  padding-right: 20px;
+  font-size: 0.9rem;
+}
+
+.breadcrumbItem:not(:first-child)::before {
+  content: "/\00a0";
+  padding-right: 8px;
+  font-size: 0.8rem;
+  color: var(--tertiary-color);
+}
+
+.breadcrumbItem a {
+  text-decoration: none;
+}
+
+.breadcrumbItem a:hover {
+  text-decoration: underline;
+}

@@ -132,6 +132,7 @@
   height: 100vh;
   background-color: #fff;
   overflow-y: auto;
+  padding-bottom: 4rem;
 }
 
 .sidedrawer__sublist button {

@@ -7,7 +7,7 @@
   --info-color: #117aff;
   --sucess-color: #4bd964;
   --danger-color: #ee1d00;
-  --light-color: #f9f9f9;
+  --light-color: #efefef;
 }
 
 * {
@@ -17,7 +17,7 @@
 }
 
 body {
-  background: var(--light-color);
+  background: #fff;
   color: var(--tertiary-color);
   line-height: 1.6;
   font-family: "Open Sans", sans-serif;
@@ -33,6 +33,33 @@ body {
 img {
   width: 100%;
   object-fit: cover;
+}
+
+.btn {
+  min-width: 130px;
+  padding: 14px 30px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-out;
+  margin: 0 10px 0 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-light {
+  background: var(--light-color);
+}
+
+.btn-primary:hover,
+.btn-light:hover {
+  background-color: var(--tertiary-color);
+  color: var(--light-color);
 }
 
 .row {

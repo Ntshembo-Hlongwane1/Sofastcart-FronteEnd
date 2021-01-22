@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import ReactCountryFlag from "react-country-flag";
 import "./TopHeader.css";
 
@@ -31,9 +33,9 @@ const TopHeader = () => {
               </a>
             </li>
             <li>
-              <a href="!#">
+              <Link to="/register-or-login">
                 <i className="fas fa-user-alt"></i> Register or Sign in
-              </a>
+              </Link>
             </li>
             <li>
               <div className="top-header__countryflag">

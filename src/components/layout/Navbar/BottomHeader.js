@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./BottomHeader.css";
 
 // Listings
 import verticalMenuItems from "./MenuItems/vertical-menu";
 
 const BottomHeader = () => {
-  const [menuToggle, setMenuToggle] = useState(false);
+  const location = useLocation();
+
+  const [menuToggle, setMenuToggle] = useState(true);
+
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setMenuToggle(false);
+    } else {
+      setMenuToggle(true);
+    }
+  }, [location]);
 
   return (
     <div className="bottom-header">
