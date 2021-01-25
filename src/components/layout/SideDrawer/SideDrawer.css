@@ -114,7 +114,6 @@
 }
 
 .sidedrawer__menuitem a {
-  flex: 1;
   display: block;
   color: var(--tertiary-color);
   text-decoration: none;

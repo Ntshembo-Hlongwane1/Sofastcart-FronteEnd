@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Components
 import Navbar from "./components/layout/Navbar/Navbar";
 import SideDrawer from "./components/layout/SideDrawer/SideDrawer";
+import Footer from "./components/layout/Footer/Footer";
 
 // Pages
 import Home from "./components/pages/Home/Home";
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/register-or-login" component={RegisterOrLogin} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

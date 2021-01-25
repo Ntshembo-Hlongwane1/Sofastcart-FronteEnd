@@ -1,0 +1,227 @@
+/* ================== FOOTER BOTTOM ================== */
+.footer__bottomInfo {
+  background-color: var(--light-color);
+  width: 100%;
+  padding: 6px 0;
+}
+
+.footer__bottomInfo-flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyrights {
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.footer__copyrights a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.footer__payment-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.footer__payment-icons li {
+  display: flex;
+  align-items: center;
+}
+
+.footer__payment-icons li img {
+  max-width: 324px;
+}
+
+/* ================== FOOTER MIDDLE ================== */
+.footer__middleInfo {
+  background-color: #f8f8f8;
+  padding: 4rem 0 0 0;
+  z-index: 1;
+}
+
+.footer__middleInfo-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+.footer__gridItem {
+  padding: 0 0.8rem;
+}
+
+.footer__middleInfo-grid:first-child {
+  padding-left: 0;
+}
+
+.footer__middleInfo-grid:last-child {
+  padding-right: 0;
+}
+
+.footer__columnTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.footer__list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.footer__list li {
+  margin-bottom: 0.4rem;
+}
+
+.footer__list li a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+  font-size: 0.7rem;
+}
+
+.footer__logo-container {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.footer__logo-container a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.footer__logo {
+  color: var(--tertiary-color);
+}
+
+.footer__callUs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer__callUs i {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.footer__callUs div small {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+}
+
+.footer__callUs div p {
+  margin-top: -8px;
+}
+
+.footer__contactInfo {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.footer__contactInfo ~ p {
+  font-weight: 700;
+}
+
+.footer__socialMediaLink ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer__socialMediaLink ul li {
+  margin-right: 1.5rem;
+}
+
+.footer__socialMediaLink ul li a i {
+  font-size: 1.1rem;
+  transition: all 0.3s ease-out;
+}
+
+.footer__socialMediaLink ul li a i:hover {
+  color: var(--primary-color);
+}
+
+/* ================== FOOTER NEWSLETTER ================== */
+.footer__newsletter-flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transform: translateY(2.3rem);
+  z-index: 2;
+}
+
+.footer__newsletter-heading {
+  display: flex;
+  align-items: center;
+}
+
+.footer__newsletter-heading span {
+  font-size: 1.1rem;
+}
+
+.footer__newsletter-heading i {
+  font-size: 1.5rem;
+  margin-right: 0.4rem;
+}
+
+.footer__newsletter-subtext {
+  font-size: 0.8rem;
+}
+
+.footer__newsletter-form {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer__newsletter-form input {
+  color: var(--tertiary-color);
+  width: 85%;
+  height: 42px;
+  border: none;
+  border-radius: 25px;
+  padding: 11px 30px;
+  outline-width: 0;
+  font-size: 0.7rem;
+}
+
+.footer__newsletter-form button {
+  height: 42px;
+  border: 1px solid solid var(--tertiary-color);
+  padding: 6px 35px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--tertiary-color);
+  border-radius: 0 25px 25px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline-width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.footer__newsletter-form button:hover {
+  background-color: #000;
+}
+/* ==================================== MEDIA QUERIES ==================================== */
+@media (max-width: 767px) {
+  .footer__bottomInfo-flexbox {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__copyrights {
+    text-align: center;
+  }
+}

@@ -122,3 +122,30 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
+/* ========================= MEDIA QUERIES ========================= */
+@media (max-width: 992px) {
+  .form-divider {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-left: none;
+  }
+
+  .form-divider::before {
+    top: 0;
+    left: 50%;
+    z-index: 2;
+  }
+
+  .form-divider::after {
+    content: "";
+    height: 1px;
+    background-color: #ddd;
+    z-index: 1;
+    position: absolute;
+    display: block;
+    left: 40px;
+    right: 40px;
+    top: 0;
+  }
+}

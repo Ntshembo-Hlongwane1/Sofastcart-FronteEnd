@@ -7,14 +7,18 @@
 
 .breadcrumbItem {
   padding-right: 20px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumbItem:not(:first-child)::before {
-  content: "/\00a0";
-  padding-right: 8px;
-  font-size: 0.8rem;
+  content: "\02C3";
+  padding-right: 20px;
+  font-size: 0.9rem;
   color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumbItem a {

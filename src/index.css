@@ -111,4 +111,13 @@ img {
   .customer_container {
     max-width: 800px;
   }
+
+  .row {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .col-1-2 {
+    padding: 0;
+  }
 }
