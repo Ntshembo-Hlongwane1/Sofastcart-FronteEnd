@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { Transition } from "react-transition-group";
+import Carousel from "react-elastic-carousel";
+import { useRef } from "react";
+// import { Transition } from "react-transition-group";
 import "./ImageSlider.css";
 
 // Images
@@ -47,79 +48,45 @@ const sliderImages = [
   },
 ];
 
-const duration = 1000;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-};
-
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered: { opacity: 1 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 },
-};
-
 const ImageSlider = () => {
-  const [sliderIndex, setSliderIndex] = useState(0);
-  const [inProp, setInProp] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setInProp(false);
-    }, 4000);
-
-    const interval = setInterval(() => {
-      setInProp(true);
-      const newIdx = sliderIndex + 1;
-
-      if (newIdx > sliderImages.length - 1) {
-        setSliderIndex(0);
-      } else {
-        setSliderIndex(newIdx);
-      }
-    }, 5000);
-    return () => {
-      return clearInterval(interval);
-    };
-  }, [sliderIndex]);
+  const itemsPerPage = 1;
+  const carouselRef = useRef(null);
+  const totalPages = Math.ceil(sliderImages.length / itemsPerPage);
+  let resetTimeout;
 
   return (
     <div className="imageslider">
-      <img
-        className="imageslider__image"
-        src={sliderImages[sliderIndex].image}
-        alt={`Carousel Slide ${sliderIndex}`}
-      />
-
-      <Transition in={inProp} timeout={duration}>
-        {(state) => (
-          <div
-            className="imageslider__info"
-            style={{
-              ...defaultStyle,
-              ...transitionStyles[state],
-            }}
-          >
-            <p className="imageslider__info-heading">
-              {sliderImages[sliderIndex].heading}
-            </p>
-            <p className="imageslider__info-subheading">
-              {sliderImages[sliderIndex].subtext}
-            </p>
-            <p className="imageslider__info-price">
-              {sliderImages[sliderIndex].price}
-            </p>
-            <a
-              href={sliderImages[sliderIndex].link}
-              className="imageslider__info-cta"
-            >
-              Shop Now
-            </a>
+      <Carousel
+        ref={carouselRef}
+        enableAutoPlay={true}
+        autoPlaySpeed={5000} // same time
+        transitionMs={1000}
+        onNextEnd={({ index }) => {
+          clearTimeout(resetTimeout);
+          if (index + 1 === totalPages) {
+            resetTimeout = setTimeout(() => {
+              carouselRef.current.goTo(0);
+            }, 5000); // same time
+          }
+        }}
+        itemsToShow={itemsPerPage}
+      >
+        {sliderImages.map((el) => (
+          <div className="imageslider__container" key={el.heading}>
+            <div className="imageslider__item-info">
+              <h3 className="imageslider__item-heading">{el.heading}</h3>
+              <p className="imageslider__item-subtext">{el.subtext}</p>
+              <p className="imageslider__item-price">{el.price}</p>
+              <button className="imageslider__item-shopnow">Shop Now</button>
+            </div>
+            <img
+              className="imageslider__image"
+              src={el.image}
+              alt={el.heading}
+            />
           </div>
-        )}
-      </Transition>
+        ))}
+      </Carousel>
     </div>
   );
 };

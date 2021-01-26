@@ -1,0 +1,32 @@
+.rec-item-wrapper {
+  padding: 10px !important;
+}
+
+.rec-arrow:hover,
+.rec-arrow:active,
+.rec-arrow:focus {
+  background-color: var(--tertiary-color) !important;
+}
+
+.productscarousel {
+  margin: 0 0 2rem 0;
+}
+
+.productscarousel__catagory-name {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+  position: relative;
+  font-weight: 400;
+}
+
+.productscarousel__catagory-name::before {
+  content: "";
+  height: 2px;
+  width: 115px;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
