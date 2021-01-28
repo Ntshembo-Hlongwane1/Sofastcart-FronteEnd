@@ -64,3 +64,84 @@
 .productcard__bottomInfo button:hover {
   background-color: var(--tertiary-color) !important;
 }
+
+/* ============================ MEDIA QUERIES ============================ */
+@media (max-width: 992px) {
+  .productcard {
+    padding: 15px 20px;
+    width: 195px;
+  }
+
+  .productcard__image {
+    width: 155px;
+    height: auto;
+  }
+
+  .productcard__price {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .productcard {
+    padding: 15px 20px;
+    width: 240px;
+  }
+
+  .productcard__image {
+    width: 200px;
+    height: auto;
+  }
+
+  .productcard__price {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .productcard {
+    padding: 15px 20px;
+    width: 195px;
+  }
+
+  .productcard__image {
+    width: 155px;
+    height: auto;
+  }
+
+  .productcard__price {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .productcard {
+    padding: 5px 10px;
+    width: 150px;
+  }
+
+  .productcard__image {
+    width: 130px;
+    height: auto;
+  }
+
+  .productcard__price {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .productcard {
+    padding: 5px 10px;
+    width: 135px;
+  }
+
+  .productcard__image {
+    width: 115px;
+    height: auto;
+  }
+
+  .productcard__price {
+    font-size: 0.6rem;
+  }
+}

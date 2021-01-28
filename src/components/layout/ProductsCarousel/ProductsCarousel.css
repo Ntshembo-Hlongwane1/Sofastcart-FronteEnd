@@ -8,6 +8,15 @@
   background-color: var(--tertiary-color) !important;
 }
 
+.productscarousel .rec-arrow {
+  font-size: 0.7rem;
+  min-width: 25px;
+  min-height: 25px;
+  width: 25px;
+  height: 25px;
+  line-height: 0;
+}
+
 .productscarousel {
   margin: 0 0 2rem 0;
 }
@@ -18,7 +27,8 @@
   border-bottom: 1px solid #ddd;
   margin-bottom: 1rem;
   position: relative;
-  font-weight: 400;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .productscarousel__catagory-name::before {

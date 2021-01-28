@@ -92,6 +92,15 @@ img {
   padding-bottom: 0.8rem;
 }
 
+.rec-arrow {
+  background-color: rgba(var(--tertiary-color), 0.5) !important;
+}
+
+.rec-dot_active {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 0 1px 3px var(--tertiary-color) !important;
+}
+
 /* =========================================================== */
 /* Container Sizings */
 /* =========================================================== */

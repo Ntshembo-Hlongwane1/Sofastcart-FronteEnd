@@ -46,7 +46,28 @@
 
 .footer__middleInfo-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "contactInfo contactInfo shop help account company";
+}
+
+.contactInfo {
+  grid-area: contactInfo;
+}
+
+.shop {
+  grid-area: shop;
+}
+
+.help {
+  grid-area: help;
+}
+
+.account {
+  grid-area: account;
+}
+
+.company {
+  grid-area: company;
 }
 
 .footer__gridItem {
@@ -214,14 +235,95 @@
   background-color: #000;
 }
 /* ==================================== MEDIA QUERIES ==================================== */
-@media (max-width: 767px) {
+@media (max-width: 1220px) {
+  .footer__newsletter-subtext {
+    display: none;
+  }
+
+  .footer__newsletter-form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 790px) {
   .footer__bottomInfo-flexbox {
     flex-direction: column;
+  }
+
+  .footer__middleInfo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "contactInfo contactInfo contactInfo contactInfo"
+      "shop help account company";
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__contactInfo {
+    margin-bottom: 0;
+  }
+
+  .footer__socialMediaLink {
+    margin-bottom: 1.3rem;
+  }
+
+  .footer__newsletter-flexbox {
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(4rem);
+  }
+
+  .footer__newsletter-form {
+    margin-top: 0.9rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .shop,
+  .help,
+  .account,
+  .company {
+    display: none;
   }
 }
 
 @media (max-width: 450px) {
   .footer__copyrights {
     text-align: center;
+  }
+
+  .footer__newsletter-form {
+    flex-direction: column;
+  }
+
+  .footer__newsletter-form input {
+    width: 100%;
+    display: block;
+  }
+
+  .footer__newsletter-form button {
+    position: relative;
+    margin-top: 0.5rem;
+    width: 100%;
+    display: block;
+    border-radius: 25px;
+  }
+
+  .footer__contactInfo {
+    display: none;
+  }
+
+  .footer__callUs div p {
+    font-size: 0.6rem;
+  }
+
+  .footer__callUs i {
+    font-size: 1.4rem;
   }
 }

@@ -1,5 +1,5 @@
+import { useRef, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
-import { useRef } from "react";
 // import { Transition } from "react-transition-group";
 import "./ImageSlider.css";
 
@@ -54,19 +54,27 @@ const ImageSlider = () => {
   const totalPages = Math.ceil(sliderImages.length / itemsPerPage);
   let resetTimeout;
 
+  useEffect(() => {
+    return () => {
+      return clearTimeout(resetTimeout);
+    };
+  });
+
   return (
     <div className="imageslider">
       <Carousel
         ref={carouselRef}
+        enableSwipe={false}
+        enableMouseSwipe={false}
         enableAutoPlay={true}
-        autoPlaySpeed={5000} // same time
+        autoPlaySpeed={5000}
         transitionMs={1000}
         onNextEnd={({ index }) => {
           clearTimeout(resetTimeout);
           if (index + 1 === totalPages) {
             resetTimeout = setTimeout(() => {
               carouselRef.current.goTo(0);
-            }, 5000); // same time
+            }, 5000);
           }
         }}
         itemsToShow={itemsPerPage}

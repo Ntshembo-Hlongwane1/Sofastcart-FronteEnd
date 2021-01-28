@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <div className="homepage">
       <ImageSlider />
-      <ProductsCarousel catagoryName="Newarrivals" />
-      <ProductsCarousel catagoryName="Best Sealers" />
+      <ProductsCarousel catagoryName="New Arrivals" />
+      <ProductsCarousel catagoryName="Best Sellers" />
       <ProductsCarousel catagoryName="On Sale" />
     </div>
   );

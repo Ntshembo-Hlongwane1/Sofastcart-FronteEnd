@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="footer__middleInfo">
         <div className="customer_container footer__middleInfo-grid">
           {/* COLUMN ONE */}
-          <div className="footer__gridItem">
+          <div className="footer__gridItem contactInfo">
             {/* Logo */}
             <div className="footer__logo-container">
               <Link to="/">
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
 
           {/* COLUMN TWO */}
-          <div className="footer__gridItem">
+          <div className="footer__gridItem shop">
             <p className="footer__columnTitle">Shop</p>
             <ul className="footer__list">
               <li>
@@ -110,7 +110,7 @@ const Footer = () => {
           </div>
 
           {/* COLUMN THREE */}
-          <div className="footer__gridItem">
+          <div className="footer__gridItem help">
             <p className="footer__columnTitle">Help</p>
             <ul className="footer__list">
               <li>
@@ -135,7 +135,7 @@ const Footer = () => {
           </div>
 
           {/* COLUMN FOUR */}
-          <div className="footer__gridItem">
+          <div className="footer__gridItem account">
             <p className="footer__columnTitle">Account</p>
             <ul className="footer__list">
               <li>
@@ -160,7 +160,7 @@ const Footer = () => {
           </div>
 
           {/* COLUMN FIVE */}
-          <div className="footer__gridItem">
+          <div className="footer__gridItem company">
             <p className="footer__columnTitle">Company</p>
             <ul className="footer__list">
               <li>
