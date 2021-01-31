@@ -1,0 +1,117 @@
+.hugeproductcard {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.hugeproductcard:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 2px 0 rgba(77, 77, 79, 0.08),
+    0 0 2px 0 rgba(77, 77, 79, 0.16);
+}
+
+.hugeproductcard__vendor {
+  font-size: 0.6rem;
+  margin-bottom: 8px;
+}
+
+.hugeproductcard__title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.hugeproductcard__image {
+  position: relative;
+}
+
+.hugeproductcard__savebadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--tertiary-color);
+  line-height: 1.1;
+}
+
+.hugeproductcard__savebadge span:first-child {
+  font-size: 0.6rem;
+}
+
+.hugeproductcard__savebadge span:last-child {
+  font-weight: 700;
+}
+
+.hugeproductcard__thumbnails {
+  width: 100%;
+  padding-top: 1.75rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+}
+
+.hugeproductcard__thumbnails-container {
+  margin-right: 0.45rem;
+  border: 1px solid #ddd;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.hugeproductcard__thumbnails-container:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.hugeproductcard__bottomInfo {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hugeproductcard__prices {
+  display: flex;
+  align-items: center;
+}
+
+.hugeproductcard__newprice {
+  color: var(--danger-color);
+  margin-right: 0.4rem;
+}
+
+.hugeproductcard__oldprice {
+  font-size: 0.6rem;
+  text-decoration: line-through;
+  color: var(--tertiary-color);
+  opacity: 0.7;
+}
+
+.hugeproductcard__cartbutton {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hugeproductcard__cartbutton:hover {
+  background-color: var(--tertiary-color);
+  color: #fff;
+}
+
+.hugeproductcard__cartbutton span {
+  margin-left: 0.5rem;
+}

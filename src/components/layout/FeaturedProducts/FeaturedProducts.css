@@ -1,0 +1,27 @@
+.feauturedproducts {
+  background-color: #f8f8f8;
+  padding: 1rem 0 3rem;
+  margin: 1rem 0;
+}
+
+.featuredproduts__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "featured-left featured-middle featured-right";
+}
+
+.featuredproducts__left {
+  grid-area: featured-left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.featuredproducts__middle {
+  grid-area: featured-middle;
+}
+
+.featuredproducts__right {
+  grid-area: featured-right;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
