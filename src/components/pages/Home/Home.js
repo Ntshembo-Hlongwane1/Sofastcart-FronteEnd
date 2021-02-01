@@ -10,9 +10,9 @@ const Home = () => {
     <div className="homepage">
       <ImageSlider />
       <FeaturedProducts />
+      <ProductsCarousel catagoryName="Daily Deals" />
       <ProductsCarousel catagoryName="New Arrivals" />
-      <ProductsCarousel catagoryName="Best Sellers" />
-      <ProductsCarousel catagoryName="On Sale" />
+      <ProductsCarousel catagoryName="Top Rated" />
     </div>
   );
 };

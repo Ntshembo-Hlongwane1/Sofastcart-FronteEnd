@@ -115,3 +115,110 @@
 .hugeproductcard__cartbutton span {
   margin-left: 0.5rem;
 }
+
+/* =========================== MEDIA QUERIES =========================== */
+@media (max-width: 1220px) {
+  .hugeproductcard__newprice {
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .hugeproductcard__oldprice {
+    font-size: 0.5rem;
+  }
+
+  .hugeproductcard__cartbutton {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hugeproductcard__vendor {
+    font-size: 0.7rem;
+  }
+
+  .hugeproductcard__title {
+    font-size: 0.9rem;
+  }
+
+  .hugeproductcard__savebadge {
+    width: 95px;
+    height: 95px;
+    line-height: 1.4;
+  }
+
+  .hugeproductcard__savebadge span:first-child {
+    font-size: 0.8rem;
+  }
+
+  .hugeproductcard__savebadge span:last-child {
+    font-size: 1.1rem;
+  }
+
+  .hugeproductcard__thumbnails {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hugeproductcard__thumbnails-container {
+    width: 76px;
+    height: 76px;
+  }
+
+  .hugeproductcard__newprice {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .hugeproductcard__oldprice {
+    font-size: 1rem;
+  }
+
+  .hugeproductcard__cartbutton {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .hugeproductcard__newprice {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .hugeproductcard__oldprice {
+    font-size: 0.7rem;
+  }
+
+  .hugeproductcard__cartbutton {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hugeproductcard__newprice {
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .hugeproductcard__oldprice {
+    font-size: 0.6rem;
+  }
+
+  .hugeproductcard__cartbutton {
+    font-size: 0.6rem;
+  }
+
+  .hugeproductcard__savebadge {
+    width: 75px;
+    height: 75px;
+    line-height: 1.1;
+  }
+
+  .hugeproductcard__savebadge span:first-child {
+    font-size: 0.6rem;
+  }
+
+  .hugeproductcard__savebadge span:last-child {
+    font-weight: 700;
+  }
+}

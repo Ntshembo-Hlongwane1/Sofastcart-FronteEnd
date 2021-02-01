@@ -1,6 +1,7 @@
 .featuredproductcard {
   padding: 15px;
-  width: 247px;
+  width: 100%;
+  height: 100%;
   position: relative;
   background: #fff;
   border: 0.3px solid #ddd;
@@ -8,6 +9,8 @@
   margin-left: 1px;
   margin-bottom: 1px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .featuredproductcard:hover {
@@ -33,8 +36,8 @@
 }
 
 .featuredproductcard__image {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  flex: 1;
 }
 
 .featuredproductcard__image img {
@@ -63,4 +66,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+/* =========================== MEDIA QUERIES =========================== */
+@media (max-width: 1220px) {
+  .featuredproductcard__price {
+    font-size: 0.7rem;
+  }
 }
