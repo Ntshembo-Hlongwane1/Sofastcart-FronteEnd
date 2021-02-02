@@ -15,35 +15,35 @@ const sliderImages = [
     image: imageOne,
     heading: "House equipment",
     subtext: "Upgrade your house equipment",
-    price: "PKR999.99",
+    price: "999.99",
     link: "!#",
   },
   {
     image: imageTwo,
     heading: "Kitchen Luxuries",
     subtext: "Improve your kitchen needs",
-    price: "PKR899.99",
+    price: "899.99",
     link: "!#",
   },
   {
     image: imageThree,
     heading: "Mens Cologne",
     subtext: "Smell the best you have had ever smelt",
-    price: "PKR799.99",
+    price: "799.99",
     link: "!#",
   },
   {
     image: imageFour,
     heading: "Skincare for Woman",
     subtext: "Get the softest skin today",
-    price: "PKR699.99",
+    price: "699.99",
     link: "!#",
   },
   {
     image: imageFive,
     heading: "Epilators",
     subtext: "Remove unwanted hair within seconds",
-    price: "PKR599.99",
+    price: "599.99",
     link: "!#",
   },
 ];
@@ -84,7 +84,7 @@ const ImageSlider = () => {
             <div className="imageslider__item-info">
               <h3 className="imageslider__item-heading">{el.heading}</h3>
               <p className="imageslider__item-subtext">{el.subtext}</p>
-              <p className="imageslider__item-price">{el.price}</p>
+              <p className="imageslider__item-price">Rs {el.price}</p>
               <button className="imageslider__item-shopnow">Shop Now</button>
             </div>
             <img

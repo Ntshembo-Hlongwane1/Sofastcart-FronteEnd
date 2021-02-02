@@ -9,6 +9,8 @@ import Footer from "./components/layout/Footer/Footer";
 // Pages
 import Home from "./components/pages/Home/Home";
 import RegisterOrLogin from "./components/pages/Register or Login/RegisterOrLogin";
+import Product from "./components/pages/Product/Product";
+import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 
 const App = () => {
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -26,6 +28,8 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/register-or-login" component={RegisterOrLogin} />
+          <Route exact path="/product/:productId" component={Product} />
+          <Route component={PageNotFound} />
         </Switch>
         <Footer />
       </div>

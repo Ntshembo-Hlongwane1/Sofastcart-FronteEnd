@@ -101,6 +101,17 @@ img {
   box-shadow: 0 0 1px 3px var(--tertiary-color) !important;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* =========================================================== */
 /* Container Sizings */
 /* =========================================================== */

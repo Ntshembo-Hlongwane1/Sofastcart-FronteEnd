@@ -66,6 +66,8 @@
   font-size: 1rem;
   width: 75%;
   border-radius: 10px;
+  cursor: pointer;
+  outline-width: 0;
 }
 
 /* ============================ MEDIA QUERIES ============================ */

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./HugeProductCard.css";
 
@@ -6,7 +7,8 @@ const HugeProductCard = ({ product }) => {
   const [activeImage, setActiveImage] = useState(0);
 
   return (
-    <div
+    <Link
+      to={`/product/${product._id}`}
       className="hugeproductcard"
       onClick={() => console.log("Clicked Card")}
     >
@@ -40,8 +42,8 @@ const HugeProductCard = ({ product }) => {
 
       <div className="hugeproductcard__bottomInfo">
         <div className="hugeproductcard__prices">
-          <p className="hugeproductcard__newprice">PKR {product.price}</p>
-          <p className="hugeproductcard__oldprice">PKR 799.00</p>
+          <p className="hugeproductcard__newprice">Rs {product.price}</p>
+          <p className="hugeproductcard__oldprice">Rs 799.00</p>
         </div>
         <button
           className="hugeproductcard__cartbutton"
@@ -54,7 +56,7 @@ const HugeProductCard = ({ product }) => {
           <span>Add to cart</span>
         </button>
       </div>
-    </div>
+    </Link>
   );
 };
 
