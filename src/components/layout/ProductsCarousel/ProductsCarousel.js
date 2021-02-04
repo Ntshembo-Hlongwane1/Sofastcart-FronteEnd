@@ -44,6 +44,8 @@ const products = [
   },
 ];
 
+// TODO: Should receive products as props from parent component
+
 const ProductsCarousel = ({ catagoryName }) => {
   const breakPoints = [
     { width: 375, itemsToShow: 2, itemsToScroll: 2 },

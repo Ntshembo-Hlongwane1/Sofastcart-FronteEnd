@@ -4,6 +4,30 @@
   position: relative;
 }
 
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgb(0 0 0 / 65%);
+  padding: 0;
+  animation: scrollDown 0.5s ease-out both;
+}
+
+@keyframes scrollDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .mobile-hamburger {
   display: none;
   font-size: 1.5rem;

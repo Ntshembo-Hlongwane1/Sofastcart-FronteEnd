@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./MiddleHeader.css";
 import shoppingbag from "../../../assets/shopping-bag.svg";
 
 const MiddleHeader = ({ clicked }) => {
   const [searchResult, setSearchResult] = useState([]);
+  const [scrolled, setScrolled] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [mobileSearchToggle, setMobileSearchToggle] = useState(false);
 
@@ -18,8 +19,28 @@ const MiddleHeader = ({ clicked }) => {
     ]);
   };
 
+  const handleScroll = () => {
+    const offset = window.scrollY;
+
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  let navbarClasses = ["middle-header"];
+
+  if (scrolled) {
+    navbarClasses.push("scrolled");
+  }
+
   return (
-    <div className="middle-header">
+    <div className={navbarClasses.join(" ")}>
       <div className="customer_container middle-header__flexbox">
         <div className="mobile-hamburger" onClick={clicked}>
           <i className="fas fa-bars"></i>
