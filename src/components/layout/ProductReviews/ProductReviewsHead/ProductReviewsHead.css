@@ -1,0 +1,46 @@
+.productReviewsHead {
+  padding: 0 0 1.5rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.productReviewsHead h2 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.productReviewsHead__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productReviewsHead__summary div {
+  font-size: 0.7rem;
+}
+
+.productReviewsHead__summary div i {
+  color: #fed700;
+}
+
+.productReviewsHead__summary div span {
+  margin-left: 0.4rem;
+}
+
+.productReviewsHead__writeReviewBtn {
+  color: var(--tertiary-color);
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  background-color: var(--primary-color);
+  border: none;
+  outline-width: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.productReviewsHead__writeReviewBtn:hover {
+  color: #fff;
+  background-color: var(--tertiary-color);
+}

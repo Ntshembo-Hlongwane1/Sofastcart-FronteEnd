@@ -11,13 +11,13 @@ const Breadcrumb = ({ route }) => {
         {route.map((el, index) => {
           if (index === route.length - 1) {
             return (
-              <li className="breadcrumbItem" key={el.link}>
+              <li key={index} className="breadcrumbItem">
                 {el.title}
               </li>
             );
           } else {
             return (
-              <li className="breadcrumbItem" key={el.link}>
+              <li key={index} className="breadcrumbItem">
                 <Link to={el.link}>{el.title}</Link>
               </li>
             );

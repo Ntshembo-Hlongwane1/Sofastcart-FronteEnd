@@ -1,0 +1,25 @@
+.productReviewsItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.productReviewsItem__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.productReviewsItem__info-author,
+.productReviewsItem_info-rating,
+.productReviewsItem__body {
+  font-size: 0.7rem;
+}
+
+.productReviewsItem__info-author span:first-child {
+  font-weight: 700;
+}
+
+.productReviewsItem_info-rating i {
+  color: #fed700;
+}

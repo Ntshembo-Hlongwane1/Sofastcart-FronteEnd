@@ -15,7 +15,7 @@ const ProductPageDescription = ({ desc, specs }) => {
   switch (tabIdx) {
     case 0:
       displayInfo = (
-        <p className="productPageDesc__info-shipping">{parse(desc)}</p>
+        <div className="productPageDesc__info-shipping">{parse(desc)}</div>
       );
       break;
     case 1:
@@ -29,9 +29,9 @@ const ProductPageDescription = ({ desc, specs }) => {
       break;
     case 2:
       displayInfo = (
-        <p className="productPageDesc__info-shipping">
+        <div className="productPageDesc__info-shipping">
           {parse(ShippingReturnsText)}
-        </p>
+        </div>
       );
       break;
     default:

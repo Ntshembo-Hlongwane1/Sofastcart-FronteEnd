@@ -204,12 +204,12 @@
 }
 
 .middle-header__searchbar form button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .middle-header__searchbar form button i {
   font-size: 18px;
-  color: #fff;
+  color: var(--tertiary-color);
 }
 
 .middle-header__icons ul {

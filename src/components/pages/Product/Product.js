@@ -7,6 +7,7 @@ import Breadcrumb from "../../layout/Breadcrumb/Breadcrumb";
 import ProductPageTopInfo from "../../layout/ProductPageTopInfo/ProductPageTopInfo";
 import ProductPageDescription from "../../layout/ProductPageDescription/ProductPageDescription";
 import ProductsCarousel from "../../layout/ProductsCarousel/ProductsCarousel";
+import ProductReviews from "../../layout/ProductReviews/ProductReviews";
 
 // Image
 import image1 from "../../../assets/product6.jpeg";
@@ -84,9 +85,19 @@ const productResult = {
   price: "200.00",
   quantityInStock: 5,
   reviews: [
-    { comment: "Great product", author: "John Doe", value: 5 },
-    { comment: "Gets the job done", author: "Jane Doe", value: 4 },
-    { comment: "Just perfect", author: "Jeff Bezos", value: 5 },
+    { body: "Great product", author: "John Doe", value: 5, date: "2020-04-23" },
+    {
+      body: "Gets the job done",
+      author: "Jane Doe",
+      value: 4,
+      date: "2020-04-25",
+    },
+    {
+      body: "Just perfect",
+      author: "Jeff Bezos",
+      value: 5,
+      date: "2020-06-04",
+    },
   ],
 };
 
@@ -117,8 +128,8 @@ const Product = ({ match }) => {
             specs={product.specifications}
           />
 
-          <div id="customer-reviews" className="productpage__customerReviews">
-            <div className="customer_container"></div>
+          <div id="customer-reviews">
+            <ProductReviews reviews={product.reviews} />
           </div>
 
           <ProductsCarousel catagoryName="Related items" />

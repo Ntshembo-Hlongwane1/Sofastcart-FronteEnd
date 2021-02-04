@@ -169,7 +169,7 @@
   margin: 2rem 0 1rem;
   text-align: center;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--tertiary-color);
   font-size: 0.7rem;
   border-radius: 25px;
   border: none;
@@ -180,6 +180,7 @@
 
 .productPageTopInfo__addCartBtn:hover {
   background-color: var(--tertiary-color);
+  color: #fff;
 }
 
 .productPageTopInfo__addCartBtn i {

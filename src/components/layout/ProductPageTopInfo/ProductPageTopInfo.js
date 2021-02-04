@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 import "./ProductPageTopInfo.css";
 
@@ -58,7 +59,9 @@ const ProductPageTopInfo = ({ product }) => {
 
             <span>(No reviews)</span>
 
-            <a href="#customer-reviews">Add Your Review</a>
+            <Link to="customer-reviews" smooth={true} spy={true} offset={-250}>
+              Add Your Review
+            </Link>
           </div>
         </div>
 
