@@ -1,0 +1,87 @@
+.productReviewsForm {
+  padding: 1rem 0;
+}
+
+.productReviewsForm > h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 1.7rem;
+}
+
+.productReviewsForm__form form {
+  width: 45%;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 0.7rem;
+}
+
+.form-group label {
+  flex: 0.4;
+  font-size: 0.7rem;
+}
+
+.form-group input,
+.form-group textarea,
+.productReviewsForm__rating {
+  flex: 0.6;
+  transition: all 0.3s ease-out;
+  line-height: 18px;
+  font-size: 0.7rem;
+}
+
+.form-group input:focus,
+.form-group input:active,
+.form-group textarea:focus,
+.form-group textarea:active {
+  border: 1px solid var(--primary-color);
+}
+
+.productReviewsForm__rating {
+  margin-right: 1.3rem;
+}
+
+.productReviewsForm__rating i {
+  color: var(--tertiary-color);
+  opacity: 0.6;
+  padding-right: 0.2rem;
+  font-size: 0.75rem;
+}
+
+.productReviewsForm__rating i.filled {
+  color: #fed700;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ddd;
+  padding: 8px 17px;
+  outline-width: 0;
+  border-radius: 25px;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.productReviewsForm__submitReview {
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 0;
+}
+
+.productReviewsForm__submitReview button {
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 25px;
+  border: none;
+  outline-width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.productReviewsForm__submitReview button:hover {
+  background-color: var(--tertiary-color);
+  color: #fff;
+}

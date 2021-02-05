@@ -10,7 +10,7 @@ const ProductReviewsHead = ({ value, numReviews, toggleForm, toggleValue }) => {
           {[1, 2, 3, 4, 5].map((el, idx) => (
             <i
               key={idx}
-              className={el <= value ? "fas fa-star" : "far fa-star"}
+              className={el <= value ? "fas fa-star filled" : "far fa-star"}
             ></i>
           ))}
           <span> Based on {numReviews} reviews</span>

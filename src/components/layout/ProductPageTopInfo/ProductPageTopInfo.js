@@ -7,6 +7,11 @@ const ProductPageTopInfo = ({ product }) => {
   const [imageIdx, setImageIdx] = useState(0);
   const [qty, setQty] = useState(1);
 
+  const averageRating = Math.floor(
+    product.reviews.reduce((acc, el) => acc + el.value, 0) /
+      product.reviews.length
+  );
+
   const onQuantityChange = (e) => {
     const operationType = e.target.id;
 
@@ -50,11 +55,14 @@ const ProductPageTopInfo = ({ product }) => {
           <h4 className="productPageTopInfo__productName">{product.title}</h4>
           <div className="productPageTopInfo__rating">
             <div>
-              <i className="far fa-star"></i>
-              <i className="far fa-star"></i>
-              <i className="far fa-star"></i>
-              <i className="far fa-star"></i>
-              <i className="far fa-star"></i>
+              {[1, 2, 3, 4, 5].map((el, idx) => (
+                <i
+                  key={idx}
+                  className={
+                    el <= averageRating ? "fas fa-star filled" : "far fa-star"
+                  }
+                ></i>
+              ))}
             </div>
 
             <span>(No reviews)</span>

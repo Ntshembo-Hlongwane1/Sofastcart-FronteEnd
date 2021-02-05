@@ -20,6 +20,11 @@
 }
 
 .productReviewsHead__summary div i {
+  color: var(--tertiary-color);
+  opacity: 0.6;
+}
+
+.productReviewsHead__summary div i.filled {
   color: #fed700;
 }
 
