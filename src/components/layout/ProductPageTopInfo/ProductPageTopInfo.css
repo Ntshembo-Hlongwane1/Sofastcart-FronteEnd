@@ -12,6 +12,7 @@
 .productPageTopInfo__images {
   grid-area: img-section;
   max-width: 600px;
+  justify-self: center;
 }
 
 .productPageTopInfo__thumbnails {
@@ -208,4 +209,34 @@
 
 .productPageTopInfo__wishlistBtn:hover {
   color: var(--primary-color);
+}
+
+/* ========================= MEDIA QUERIES ========================= */
+@media (max-width: 992px) {
+  .productPageTopInfo__productSummary {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "img-section info-section"
+      "pricing-section pricing-section";
+    gap: 3px;
+  }
+
+  .productPageTopInfo__pricing {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 792px) {
+  .productPageTopInfo__productSummary {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img-section"
+      "info-section"
+      "pricing-section";
+    gap: 2rem;
+  }
+
+  .productPageTopInfo__summary {
+    padding: 0;
+  }
 }

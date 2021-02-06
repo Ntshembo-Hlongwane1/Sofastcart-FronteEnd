@@ -25,7 +25,6 @@ const ProductPageTopInfo = ({ product }) => {
   return (
     <div className="productPageTopInfo__productSummary customer_container">
       {/* IMAGES SECTION */}
-
       <div className="productPageTopInfo__images">
         <img
           className="productPageTopInfo__images-main"
@@ -65,7 +64,11 @@ const ProductPageTopInfo = ({ product }) => {
               ))}
             </div>
 
-            <span>(No reviews)</span>
+            <span>
+              {product.reviews.length > 0
+                ? `(${product.reviews.length} reviews)`
+                : "(No reviews)"}
+            </span>
 
             <Link to="customer-reviews" smooth={true} spy={true} offset={-250}>
               Add Your Review

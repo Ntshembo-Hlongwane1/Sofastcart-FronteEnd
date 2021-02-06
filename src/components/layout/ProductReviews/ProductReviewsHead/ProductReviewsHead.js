@@ -20,7 +20,7 @@ const ProductReviewsHead = ({ value, numReviews, toggleForm, toggleValue }) => {
           className="productReviewsHead__writeReviewBtn"
           onClick={() => toggleForm((prev) => !prev)}
         >
-          {!toggleValue ? "Write a review" : "Close review form"}
+          {!toggleValue ? "Write a review" : "Close review"}
         </button>
       </div>
     </div>

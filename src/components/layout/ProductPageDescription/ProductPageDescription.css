@@ -56,3 +56,45 @@
 .productPageDesc__info-specs {
   margin-left: 1rem;
 }
+
+/* =========================== MEDIA QUERIES =========================== */
+@media (max-width: 992px) {
+  .productPageDesc__navigation-item {
+    font-size: 0.7rem;
+    padding: 0.6rem 0;
+    margin: 0 1rem;
+  }
+
+  .productPageDesc__container {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .productPageDesc__container nav {
+    padding-bottom: 6px;
+    overflow: auto;
+  }
+
+  .productPageDesc__navigation {
+    justify-content: space-between;
+    min-width: 420px;
+  }
+
+  .productPageDesc__navigation-item {
+    font-size: 0.7rem;
+    padding: 0.6rem 0;
+  }
+
+  .productPageDesc__info-desc,
+  .productPageDesc__info-specs,
+  .productPageDesc__info-shipping {
+    margin-top: 1rem;
+  }
+
+  .productPageDesc {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+}

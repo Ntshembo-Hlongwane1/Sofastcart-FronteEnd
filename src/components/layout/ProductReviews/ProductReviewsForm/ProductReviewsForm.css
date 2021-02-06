@@ -85,3 +85,54 @@
   background-color: var(--tertiary-color);
   color: #fff;
 }
+
+/* ========================== MEDIA QUERIES ========================== */
+@media (max-width: 792px) {
+  .productReviewsForm__form form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .form-group {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .productReviewsForm__rating {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    line-height: 18px;
+    font-size: 0.7rem;
+  }
+
+  .productReviewsForm__submitReview {
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 0;
+  }
+
+  .productReviewsForm__submitReview button {
+    display: block;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 25px;
+    border: none;
+    outline-width: 0;
+    transition: all 0.3s ease-out;
+  }
+}

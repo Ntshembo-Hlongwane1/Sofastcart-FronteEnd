@@ -21,8 +21,8 @@ const ProductPageDescription = ({ desc, specs }) => {
     case 1:
       displayInfo = (
         <ul className="productPageDesc__info-specs">
-          {specs.map((el) => (
-            <li>{el}</li>
+          {specs.map((el, idx) => (
+            <li key={idx}>{el}</li>
           ))}
         </ul>
       );
