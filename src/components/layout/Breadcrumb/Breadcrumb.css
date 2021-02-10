@@ -23,6 +23,7 @@
 
 .breadcrumbItem a {
   text-decoration: none;
+  color: var(--tertiary-color);
 }
 
 .breadcrumbItem a:hover {

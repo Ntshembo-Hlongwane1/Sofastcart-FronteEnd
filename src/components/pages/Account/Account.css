@@ -1,9 +1,9 @@
-.register-or-login__form {
+.account__form {
   padding: 0 2rem;
   margin-bottom: 2rem;
 }
 
-.register-or-login__form-header {
+.account__form-header {
   font-size: 1.2rem;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
@@ -12,7 +12,7 @@
   font-weight: 400;
 }
 
-.register-or-login__form-header::before {
+.account__form-header::before {
   content: "";
   height: 2px;
   width: 115px;
@@ -22,7 +22,7 @@
   left: 0;
 }
 
-.register-or-login__form p {
+.account__form p {
   font-size: 0.7rem;
   margin-bottom: 1.3rem;
 }
@@ -53,15 +53,15 @@
   border: 1px solid var(--primary-color);
 }
 
-.register-or-login__forgotpassword {
+.account__forgotpassword {
   display: flex;
   margin-bottom: 27px;
   justify-content: space-between;
   font-size: 0.7rem;
 }
 
-.register-or-login__forgotpassword a,
-.register-or-login__forgotpassword button {
+.account__forgotpassword a,
+.account__forgotpassword button {
   color: var(--tertiary-color);
   text-decoration: none;
   border: none;
@@ -72,28 +72,28 @@
   outline-width: 0;
 }
 
-.register-or-login__forgotpassword a:hover,
-.register-or-login__forgotpassword button:hover {
+.account__forgotpassword a:hover,
+.account__forgotpassword button:hover {
   color: var(--primary-color);
 }
 
-.register-or-login__subtext {
+.account__subtext {
   padding: 0 2rem;
 }
 
-.register-or-login__subtext h4 {
+.account__subtext h4 {
   font-weight: 400;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-.register-or-login__subtext p i {
+.account__subtext p i {
   color: var(--sucess-color);
   font-size: 0.7rem;
   margin-right: 5px;
 }
 
-.register-or-login__subtext p span {
+.account__subtext p span {
   font-size: 0.7rem;
   color: var(--tertiary-color);
 }

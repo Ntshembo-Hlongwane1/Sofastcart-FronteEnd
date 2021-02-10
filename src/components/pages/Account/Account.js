@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./RegisterOrLogin.css";
+import "./Account.css";
 
 // Components
 import Breadcrumb from "../../layout/Breadcrumb/Breadcrumb";
 
 // Page breadcrumb
-const pageRoute = [{ title: "Register or Login", link: "/register-or-login" }];
+const pageRoute = [{ title: "Account", link: "/account" }];
 
-const RegisterOrLogin = () => {
+const Account = () => {
   const [showforgotPassword, setShowForgotPassword] = useState(false);
   return (
-    <div className="register-or-login">
+    <div className="account">
       <Breadcrumb route={pageRoute} />
       <div className="customer_container row">
         <div className="col-1-2">
           {!showforgotPassword ? (
-            <form className="register-or-login__form">
-              <h3 className="register-or-login__form-header">Login</h3>
+            <form className="account__form">
+              <h3 className="account__form-header">Login</h3>
               <p>Welcome back Sigin in to your account</p>
               <div className="form-control">
                 <label htmlFor="email">Email Address</label>
@@ -32,7 +32,7 @@ const RegisterOrLogin = () => {
                   autoComplete="true"
                 />
               </div>
-              <div className="register-or-login__forgotpassword">
+              <div className="account__forgotpassword">
                 <Link to="/">Return to Store</Link>
                 <button onClick={() => setShowForgotPassword(true)}>
                   Forgotten Password?
@@ -43,14 +43,14 @@ const RegisterOrLogin = () => {
               </button>
             </form>
           ) : (
-            <form className="register-or-login__form">
-              <h3 className="register-or-login__form-header">Reset Password</h3>
+            <form className="account__form">
+              <h3 className="account__form-header">Reset Password</h3>
               <p>We will send you an email to reset your password</p>
               <div className="form-control">
                 <label htmlFor="email">Email Address</label>
                 <input type="email" required id="email" />
               </div>
-              <div className="register-or-login__forgotpassword-buttons">
+              <div className="account__forgotpassword-buttons">
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
@@ -65,10 +65,8 @@ const RegisterOrLogin = () => {
           )}
         </div>
         <div className="col-1-2 form-divider">
-          <form className="register-or-login__form">
-            <h3 className="register-or-login__form-header">
-              Create New Account
-            </h3>
+          <form className="account__form">
+            <h3 className="account__form-header">Create New Account</h3>
             <p>Create your own Account</p>
             <div className="form-control">
               <label htmlFor="name">First Name</label>
@@ -95,7 +93,7 @@ const RegisterOrLogin = () => {
               Register
             </button>
           </form>
-          <div className="register-or-login__subtext">
+          <div className="account__subtext">
             <h4>Sign up today and you'll be able to:</h4>
             <p>
               <i className="fas fa-check"></i>
@@ -116,4 +114,4 @@ const RegisterOrLogin = () => {
   );
 };
 
-export default RegisterOrLogin;
+export default Account;

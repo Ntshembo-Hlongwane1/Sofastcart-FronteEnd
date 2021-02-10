@@ -1,24 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./HugeProductCard.css";
+import "./FPHugeCard-One.css";
 
 const HugeProductCard = ({ product }) => {
   const [activeImage, setActiveImage] = useState(0);
 
   return (
-    <Link
-      to={`/product/${product._id}`}
-      className="hugeproductcard"
-      onClick={() => console.log("Clicked Card")}
-    >
+    <Link to={`/product/${product._id}`} className="hugeproductcard">
       <div className="hugeproductcard__topInfo">
         <p className="hugeproductcard__vendor">{product.vendor}</p>
         <p className="hugeproductcard__title">{product.title}</p>
       </div>
 
       <div className="hugeproductcard__image">
-        <img src={product.img[activeImage]} alt={product.title} />
+        <img src={product.images[activeImage]} alt={product.title} />
         <span className="hugeproductcard__savebadge">
           <span>Save</span>
           <span>10%</span>
@@ -26,7 +22,7 @@ const HugeProductCard = ({ product }) => {
       </div>
 
       <div className="hugeproductcard__thumbnails">
-        {product.img.map((image, idx) => (
+        {product.images.map((image, idx) => (
           <div
             key={idx}
             className="hugeproductcard__thumbnails-container"

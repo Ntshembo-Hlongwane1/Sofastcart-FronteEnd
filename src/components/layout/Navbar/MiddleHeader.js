@@ -22,7 +22,7 @@ const MiddleHeader = ({ clicked }) => {
   const handleScroll = () => {
     const offset = window.scrollY;
 
-    if (offset > 200) {
+    if (offset > 180) {
       setScrolled(true);
     } else {
       setScrolled(false);

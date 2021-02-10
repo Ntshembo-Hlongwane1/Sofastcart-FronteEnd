@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./FeaturedProductCard.css";
+import "./FPCard-One.css";
 
 const FeaturedProductCard = ({ product }) => {
   return (
@@ -10,7 +10,7 @@ const FeaturedProductCard = ({ product }) => {
         <p className="featuredproductcard__title">{product.title}</p>
       </div>
       <div className="featuredproductcard__image">
-        <img src={product.img} alt={product.title} />
+        <img src={product.images[0]} alt={product.title} />
       </div>
       <div className="featuredproductcard__bottomInfo">
         <p className="featuredproductcard__price">Rs {product.price}</p>

@@ -1,0 +1,40 @@
+.fpTabContainerHeader {
+  width: 100%;
+  padding: 8px 0;
+}
+
+.fpTabContainerHeader__navigation {
+  border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+.fpTabContainerHeader__navigation-items {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(1px);
+}
+
+.fpTabContainerHeader__navigation-item {
+  margin: 0 0.9rem;
+  position: relative;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.fpTabContainerHeader__navigation-item.active {
+  border-bottom: 2px solid var(--primary-color);
+  font-weight: 700;
+}
+
+.fpTabContainerHeader__navigation-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  height: 6px;
+  width: 12px;
+  border-radius: 0 0 25px 25px;
+  background-color: var(--primary-color);
+}

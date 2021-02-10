@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ReactCountryFlag from "react-country-flag";
 import "./SideDrawer.css";
 
@@ -26,9 +27,9 @@ const SideDrawer = ({ show, bgClicked }) => {
           <li>
             <ul className="sidedrawer__icons">
               <li>
-                <a href="!#">
+                <Link to="/account">
                   <i className="far fa-user"></i>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="!#">

@@ -33,7 +33,7 @@ const TopHeader = () => {
               </a>
             </li>
             <li>
-              <Link to="/register-or-login">
+              <Link to="/account">
                 <i className="fas fa-user-alt"></i> Register or Sign in
               </Link>
             </li>

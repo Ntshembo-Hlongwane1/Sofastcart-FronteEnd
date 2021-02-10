@@ -3,16 +3,20 @@ import "./Home.css";
 // Components
 import ImageSlider from "../../layout/ImageSlider/ImageSlider";
 import ProductsCarousel from "../../layout/ProductsCarousel/ProductsCarousel";
-import FeaturedProducts from "../../layout/FeaturedProducts/FeaturedProducts";
+import FeaturedProductsOne from "../../layout/FeaturedProductsOne/FP-One";
+import FeaturedProductsTwo from "../../layout/FeaturedProductsTwo/FP-Two";
+
+import products from "../../../assets/productData";
 
 const Home = () => {
   return (
     <div className="homepage">
       <ImageSlider />
-      <FeaturedProducts />
-      <ProductsCarousel catagoryName="Daily Deals" />
-      <ProductsCarousel catagoryName="New Arrivals" />
-      <ProductsCarousel catagoryName="Top Rated" />
+      <FeaturedProductsTwo featuredProducts={products.slice(0, 10)} />
+      <FeaturedProductsOne featuredProducts={products.slice(0, 10)} />
+      <ProductsCarousel catagoryName="Daily Deals" products={products} />
+      <ProductsCarousel catagoryName="New Arrivals" products={products} />
+      <ProductsCarousel catagoryName="Top Rated" products={products} />
     </div>
   );
 };
