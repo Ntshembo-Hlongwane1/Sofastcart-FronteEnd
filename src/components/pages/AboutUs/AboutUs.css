@@ -1,0 +1,90 @@
+.aboutus__banner {
+  text-align: center;
+  padding: 5rem 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--tertiary-color);
+  background-color: #f8f8f8;
+}
+
+.aboutus__story {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.aboutus__story-a {
+  text-align: center;
+}
+
+.aboutus__story-a h5,
+.aboutus__story-b h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.9rem 0;
+}
+
+.aboutus__story-a p,
+.aboutus__story-b p {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.aboutus__employees {
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.aboutus__employees > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutus__employee-image img {
+  width: 170px;
+  border-radius: 50%;
+}
+
+.aboutus__employee-name {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.aboutus__employee-roll {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.aboutus__hiring-cricle {
+  background-color: #fed700;
+  width: 170px;
+  height: 185.44px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 0.77rem;
+}
+
+.aboutus__hiring-top {
+  font-size: 0.95rem;
+}
+
+.aboutus__hiring-bottom {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.aboutus__employee-detailBtn {
+  cursor: pointer;
+  color: var(--tertiary-color);
+  transition: all 0.2s ease-out;
+}
+
+.aboutus__employee-detailBtn:hover {
+  color: var(--primary-color);
+}

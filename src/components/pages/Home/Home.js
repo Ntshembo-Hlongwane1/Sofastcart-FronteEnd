@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Home.css";
 
 // Components
@@ -9,6 +10,10 @@ import FeaturedProductsTwo from "../../layout/FeaturedProductsTwo/FP-Two";
 import products from "../../../assets/productData";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: "0px" });
+  });
+
   return (
     <div className="homepage">
       <ImageSlider />

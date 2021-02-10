@@ -1,0 +1,11 @@
+.storeLocation__flexbox {
+  display: flex;
+}
+
+.storeLocation__flexbox-left {
+  flex: 0.3;
+}
+
+.storeLocation__flexbox-right {
+  flex: 0.7;
+}
