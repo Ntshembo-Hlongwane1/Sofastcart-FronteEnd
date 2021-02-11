@@ -34,7 +34,7 @@ const Product = ({ match }) => {
     };
 
     fetchData();
-  }, [productId]);
+  }, [productId, product]);
 
   return (
     <div className="productpage">
