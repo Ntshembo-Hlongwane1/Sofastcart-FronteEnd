@@ -14,6 +14,7 @@ import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 import AboutUs from "./components/pages/AboutUs/AboutUs";
 import ContactUs from "./components/pages/ContactUs/ContactUs";
 import StoreLocation from "./components/pages/StoreLocation/StoreLocation";
+import Wishlist from "./components/pages/Wishlist/Wishlist";
 
 const App = () => {
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -34,6 +35,7 @@ const App = () => {
           <Route exact path="/product/:productId" component={Product} />
           <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/contact-us" component={ContactUs} />
+          <Route exact path="/wishlist" component={Wishlist} />
           <Route exact path="/store-location" component={StoreLocation} />
           <Route component={PageNotFound} />
         </Switch>
