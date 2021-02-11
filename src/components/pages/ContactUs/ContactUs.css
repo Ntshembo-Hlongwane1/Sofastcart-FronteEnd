@@ -82,3 +82,7 @@
   background-color: var(--tertiary-color);
   color: #fff;
 }
+
+.contactus__map .map {
+  height: 100%;
+}

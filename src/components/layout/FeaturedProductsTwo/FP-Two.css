@@ -1,7 +1,20 @@
 .featuredProductsTwo {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-areas: "hugecard container";
   gap: 1rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  .featuredProductsTwo {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "container"
+      "hugecard";
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
 }

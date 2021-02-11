@@ -134,7 +134,6 @@ input[type="number"] {
 
   .row {
     flex-direction: column;
-    padding: 0;
   }
 
   .col-1-2 {

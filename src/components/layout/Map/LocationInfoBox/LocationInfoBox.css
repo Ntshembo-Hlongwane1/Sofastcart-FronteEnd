@@ -1,0 +1,37 @@
+.location-info {
+  position: absolute;
+  top: 80px;
+  right: 50px;
+  width: 400px;
+  min-height: 200px;
+  padding: 1.2rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.location-info h2 {
+  margin: 0;
+}
+
+.close-location-info {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.close-location-info:hover {
+  color: firebrick;
+}
+
+.location-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.location-info li {
+  padding: 5px 0;
+}

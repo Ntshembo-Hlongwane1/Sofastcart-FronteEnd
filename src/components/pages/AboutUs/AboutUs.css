@@ -34,9 +34,17 @@
   background-color: #f8f8f8;
 }
 
-.aboutus__employees > div {
+.aboutus__employees > .aboutus__employee-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.aboutus__employee-image {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .aboutus__employee-image img {
@@ -87,4 +95,60 @@
 
 .aboutus__employee-detailBtn:hover {
   color: var(--primary-color);
+}
+
+@media (max-width: 1175px) {
+  .aboutus__hiring-cricle,
+  .aboutus__employee-image img {
+    width: 130px;
+    height: 133px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+  .aboutus__hiring-cricle,
+  .aboutus__employee-image img {
+    width: 100px;
+    height: 103px;
+    margin-bottom: 8px;
+  }
+
+  .aboutus__hiring-top {
+    font-size: 0.7rem;
+  }
+
+  .aboutus__hiring-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 787px) {
+  .aboutus__banner {
+    padding: 3rem 0;
+    font-size: 2.5rem;
+  }
+
+  .aboutus__employees > .aboutus__employee-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .aboutus__employee {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus__banner {
+    padding: 2.5rem 0;
+    font-size: 2rem;
+  }
+
+  .aboutus__employees > .aboutus__employee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aboutus__employee {
+    margin-bottom: 1rem;
+  }
 }

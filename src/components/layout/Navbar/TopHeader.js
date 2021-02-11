@@ -23,14 +23,14 @@ const TopHeader = () => {
         <div className="top-header__right">
           <ul>
             <li>
-              <a href="!#">
+              <Link to="/store-location">
                 <i className="fas fa-map-marker-alt"></i> Store Location
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="!#">
+              <Link to="/contact-us">
                 <i className="fas fa-truck"></i> Track Your Order
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/account">

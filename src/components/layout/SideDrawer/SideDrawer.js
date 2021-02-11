@@ -32,7 +32,7 @@ const SideDrawer = ({ show, bgClicked }) => {
                 </Link>
               </li>
               <li>
-                <a href="!#">
+                <Link to="/wishlist">
                   <div className="icon-badge__container">
                     <i className="far fa-heart"></i>
                     <span
@@ -42,7 +42,7 @@ const SideDrawer = ({ show, bgClicked }) => {
                       0
                     </span>
                   </div>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="!#" className="sidedrawer__countryflag">
@@ -102,28 +102,28 @@ const SideDrawer = ({ show, bgClicked }) => {
 
         <ul className="sidedrawer__contactinfo">
           <li>
-            <a href="!#">
+            <Link to="/contact-us">
               <i className="fas fa-phone-alt"></i>
               <span>Call</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="!#">
+            <Link to="/contact-us">
               <i className="far fa-envelope"></i>
               <span>Contact</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="!#">
+            <Link to="/about-us">
               <i className="fas fa-globe"></i>
               <span>Store info</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="!#">
+            <Link to="/store-location">
               <i className="fas fa-map-marker-alt"></i>
               <span>Directions</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

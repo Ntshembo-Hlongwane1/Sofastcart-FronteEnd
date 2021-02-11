@@ -4,6 +4,7 @@
   padding: 20px 20px 25px;
   position: relative;
   cursor: pointer;
+  grid-area: hugecard;
 }
 
 .fpHugeCardTwo__salebanner {

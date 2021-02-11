@@ -66,7 +66,15 @@ const ContactUs = () => {
         </div>
 
         <div className="contactus__map">
-          <Map lng={28.233333} lat={-26.1} zoom={10} />
+          <Map
+            eventData={[
+              {
+                id: 1,
+                coordinates: [28.2293, -26.0944],
+                title: "Kempton Park",
+              },
+            ]}
+          />
         </div>
       </div>
     </div>

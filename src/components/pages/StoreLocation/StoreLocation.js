@@ -36,7 +36,15 @@ const StoreLocation = () => {
         </div>
 
         <div className="storeLocation__flexbox-right">
-          <Map />
+          <Map
+            eventData={[
+              {
+                id: 1,
+                coordinates: [28.2293, -26.0944],
+                title: "Kempton Park",
+              },
+            ]}
+          />
         </div>
       </div>
     </div>

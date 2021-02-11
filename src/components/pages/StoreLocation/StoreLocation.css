@@ -8,4 +8,9 @@
 
 .storeLocation__flexbox-right {
   flex: 0.7;
+  height: 600px;
+}
+
+.storeLocation__flexbox-right .map {
+  height: 100%;
 }

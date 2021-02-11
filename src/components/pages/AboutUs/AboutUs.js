@@ -53,7 +53,7 @@ const AboutUs = () => {
         </div>
         {/* The team banner */}
         <div className="aboutus__employees">
-          <div className="customer_container">
+          <div className="customer_container aboutus__employee-grid">
             <div className="aboutus__employee">
               <div className="aboutus__employee-image">
                 <img src="./images/aboutus-person1.jpg" alt="ceo and founder" />
@@ -96,15 +96,7 @@ const AboutUs = () => {
 
             <div className="aboutus__employee">
               <div className="aboutus__employee-image">
-                <div
-                  className="aboutus__hiring-cricle"
-                  style={{
-                    backgroundColor: "#FED700",
-                    width: "170px",
-                    height: "170px",
-                    borderRadius: "50%",
-                  }}
-                >
+                <div className="aboutus__hiring-cricle">
                   <p className="aboutus__hiring-top">We are</p>
                   <p className="aboutus__hiring-bottom">Hiring!</p>
                 </div>

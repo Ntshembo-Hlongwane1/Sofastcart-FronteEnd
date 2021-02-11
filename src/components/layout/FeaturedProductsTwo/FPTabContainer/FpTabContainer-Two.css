@@ -1,5 +1,17 @@
+.fpTabContainerTwo {
+  grid-area: container;
+}
+
 .fpTabContainerTwo__cardgrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3px;
+}
+
+@media (max-width: 767px) {
+  .fpTabContainerTwo__cardgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
 }

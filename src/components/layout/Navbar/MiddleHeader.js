@@ -133,26 +133,26 @@ const MiddleHeader = ({ clicked }) => {
         <div className="middle-header__icons">
           <ul>
             <li>
-              <a href="!#">
+              <Link to="/account">
                 <i className="far fa-user"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="!#">
+              <Link to="/wishlist">
                 <div className="icon-badge__container">
                   <i className="far fa-heart"></i>
                   <span className="icon-badge">0</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="middle-header__shoppingbag" href="!#">
+              <Link className="middle-header__shoppingbag" to="/shopping-cart">
                 <div className="icon-badge__container">
                   <img src={shoppingbag} alt="shopping bag icons" />
                   <span className="icon-badge">0</span>
                 </div>
                 <span className="middle-header__cartprice">$0.00</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
