@@ -8,26 +8,39 @@ import ProductPageTopInfo from "../../layout/ProductPageTopInfo/ProductPageTopIn
 import ProductPageDescription from "../../layout/ProductPageDescription/ProductPageDescription";
 import ProductsCarousel from "../../layout/ProductsCarousel/ProductsCarousel";
 import ProductReviews from "../../layout/ProductReviews/ProductReviews";
+import Spinner from "../../layout/Spinner/Spinner";
 
-import Products from "../../../assets/productData";
+import products from "../../../assets/productData";
 
 const Product = ({ match }) => {
   const productId = match.params.productId - 1;
 
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ behavior: "smooth", top: "0px" });
   });
 
   useEffect(() => {
-    // TODO: make request to backend to gfet product by id
-    setProduct(Products[productId]);
-  }, [productId, product]);
+    // TODO: make request to backend to get product by id
+
+    const fetchData = async () => {
+      setLoading(true);
+      setTimeout(() => {
+        setProduct(products[productId]);
+        setLoading(false);
+      }, 1500);
+    };
+
+    fetchData();
+  }, [productId]);
 
   return (
     <div className="productpage">
-      {product && (
+      {loading ? (
+        <Spinner />
+      ) : product ? (
         <>
           <Breadcrumb route={[{ title: `${product.title}` }]} />
 
@@ -44,9 +57,11 @@ const Product = ({ match }) => {
 
           <ProductsCarousel
             catagoryName="Related items"
-            products={Products.reverse()}
+            products={products.reverse()}
           />
         </>
+      ) : (
+        <h3>Something went wrong please reload page!</h3>
       )}
     </div>
   );
