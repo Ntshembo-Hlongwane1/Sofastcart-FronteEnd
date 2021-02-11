@@ -83,6 +83,31 @@
   color: #fff;
 }
 
+.contactus__map {
+  height: 700px;
+}
+
 .contactus__map .map {
   height: 100%;
+}
+
+@media (max-width: 992px) {
+  .contactus__flexbox {
+    flex-direction: column;
+  }
+
+  .contactus__map,
+  .contactus__form {
+    padding: 1rem 0;
+  }
+
+  .contactus__formSubmit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactus__map {
+    height: 400px;
+  }
 }

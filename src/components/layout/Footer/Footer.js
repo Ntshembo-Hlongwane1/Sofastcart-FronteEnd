@@ -155,7 +155,7 @@ const Footer = () => {
             </div>
 
             {/* COLUMN FOUR */}
-            <div className="footer__gridItem account">
+            <div className="footer__gridItem accountFooter">
               <p className="footer__columnTitle">Account</p>
               <ul className="footer__list">
                 <li>

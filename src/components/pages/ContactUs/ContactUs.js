@@ -4,6 +4,7 @@ import "./ContactUs.css";
 // Components
 import Breadcrumbs from "../../layout/Breadcrumb/Breadcrumb";
 import Map from "../../layout/Map/Map";
+import storeLocation from "../../../assets/store-locations";
 
 const path = [{ title: "Contact Us", link: "/contact-us" }];
 
@@ -66,15 +67,7 @@ const ContactUs = () => {
         </div>
 
         <div className="contactus__map">
-          <Map
-            eventData={[
-              {
-                id: 1,
-                coordinates: [28.2293, -26.0944],
-                title: "Kempton Park",
-              },
-            ]}
-          />
+          <Map zoom={11} eventData={storeLocation} />
         </div>
       </div>
     </div>
