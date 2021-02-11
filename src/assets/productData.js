@@ -1,22 +1,9 @@
-import image1 from "./product1.jpeg";
-import image2 from "./product2.jpeg";
-import image3 from "./product3.jpeg";
-import image4 from "./product4.jpeg";
-import image5 from "./product5.jpeg";
-import image6 from "./product6.jpeg";
-import image7 from "./product7.jpeg";
-import image8 from "./product8.jpeg";
-import image9 from "./product9.jpeg";
-import image10 from "./product10.jpeg";
-import image11 from "./product11.jpeg";
-import image12 from "./product12.jpeg";
-
 const products = [
   {
     _id: 1,
     vendor: "Vendor 1",
     title: "Product One",
-    images: [image1, image1],
+    images: ["./images/product1.jpeg", "./images/product1.jpeg"],
     price: "150.00",
     category: "Category One",
     description: `
@@ -108,7 +95,7 @@ const products = [
     _id: 2,
     vendor: "Vendor 2",
     title: "Product Two",
-    images: [image2],
+    images: ["./images/product2.jpeg"],
     price: "250.00",
     category: "Category Two",
     description: `
@@ -200,7 +187,11 @@ const products = [
     _id: 3,
     vendor: "Vendor 3",
     title: "Product Three",
-    images: [image3, image3, image3],
+    images: [
+      "./images/product3.jpeg",
+      "./images/product3.jpeg",
+      "./images/product3.jpeg",
+    ],
     price: "350.00",
     category: "Category Three",
     description: `
@@ -292,7 +283,7 @@ const products = [
     _id: 4,
     vendor: "Vendor 4",
     title: "Product Four",
-    images: [image4],
+    images: ["./images/product4.jpeg"],
     price: "450.00",
     category: "Category Four",
     description: `
@@ -384,7 +375,7 @@ const products = [
     _id: 5,
     vendor: "Vendor 5",
     title: "Product Five",
-    images: [image5, image5],
+    images: ["./images/product5.jpeg", "./images/product5.jpeg"],
     price: "550.00",
     category: "Category Five",
     description: `
@@ -464,7 +455,12 @@ const products = [
     _id: 6,
     vendor: "Vendor 6",
     title: "Product Six",
-    images: [image6, image6, image6, image6],
+    images: [
+      "./images/product6.jpeg",
+      "./images/product6.jpeg",
+      "./images/product6.jpeg",
+      "./images/product6.jpeg",
+    ],
     price: "350.00",
     category: "Category Six",
     description: `
@@ -556,7 +552,7 @@ const products = [
     _id: 7,
     vendor: "Vendor 7",
     title: "Product Seven",
-    images: [image7],
+    images: ["./images/product7.jpeg"],
     price: "250.00",
     category: "Category Seven",
     description: `
@@ -648,7 +644,7 @@ const products = [
     _id: 8,
     vendor: "Vendor 8",
     title: "Product Eight",
-    images: [image8],
+    images: ["./images/product8.jpeg"],
     price: "650.00",
     category: "Category Eight",
     description: `
@@ -740,7 +736,7 @@ const products = [
     _id: 9,
     vendor: "Vendor 9",
     title: "Product Nine",
-    images: [image9, image9],
+    images: ["./images/product9.jpeg", "./images/product9.jpeg"],
     price: "450.00",
     category: "Category Nine",
     description: `
@@ -832,7 +828,7 @@ const products = [
     _id: 10,
     vendor: "Vendor 10",
     title: "Product Ten",
-    images: [image10, image10],
+    images: ["./images/product10.jpeg", "./images/product10.jpeg"],
     price: "550.00",
     category: "Category Ten",
     description: `
@@ -924,7 +920,11 @@ const products = [
     _id: 11,
     vendor: "Vendor 11",
     title: "Product Eleven",
-    images: [image11, image11, image11],
+    images: [
+      "./images/product11.jpeg",
+      "./images/product11.jpeg",
+      "./images/product11.jpeg",
+    ],
     price: "1150.00",
     category: "Category Eleven",
     description: `
@@ -1016,7 +1016,7 @@ const products = [
     _id: 12,
     vendor: "Vendor 12",
     title: "Product Twelve",
-    images: [image12, image12],
+    images: ["./images/product12.jpeg", "./images/product12.jpeg"],
     price: "850.00",
     category: "Category Twelve",
     description: `

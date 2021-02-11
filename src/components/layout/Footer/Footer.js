@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
-// Images
-import paymentIcons from "../../../assets/payment-icons.png";
+// Components
+import Spinner from "../Spinner/Spinner";
 import ProductsCarousel from "../ProductsCarousel/ProductsCarousel";
 
 // products
@@ -11,6 +11,22 @@ import products from "../../../assets/productData";
 
 const Footer = () => {
   const [inputEmail, setInputEmail] = useState("");
+  const [productData, setProductData] = useState();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // TODO: MAKE REQUEST FOR DATA TO API
+
+    const fetchData = async () => {
+      setLoading(true);
+      setTimeout(() => {
+        setProductData(products);
+        setLoading(false);
+      }, 1500);
+    };
+
+    fetchData();
+  }, []);
 
   const onNewsletterSubmission = (e) => {
     e.preventDefault();
@@ -22,7 +38,13 @@ const Footer = () => {
 
   return (
     <>
-      <ProductsCarousel catagoryName="Latest products" products={products} />
+      {loading ? (
+        <Spinner />
+      ) : productData ? (
+        <ProductsCarousel catagoryName="Latest products" products={products} />
+      ) : (
+        <h3>Something went wrong please reload page!</h3>
+      )}
       <footer className="footer">
         {/* Newsletter */}
         <div className="footer__newsletter">
@@ -210,7 +232,7 @@ const Footer = () => {
             </p>
             <ul className="footer__payment-icons">
               <li>
-                <img src={paymentIcons} alt="Payment Icons" />
+                <img src="./images/payment-icons.png" alt="Payment Icons" />
               </li>
             </ul>
           </div>

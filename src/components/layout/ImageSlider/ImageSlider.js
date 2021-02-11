@@ -3,44 +3,37 @@ import Carousel from "react-elastic-carousel";
 // import { Transition } from "react-transition-group";
 import "./ImageSlider.css";
 
-// Images
-import imageOne from "../../../assets/carousel1.jpeg";
-import imageTwo from "../../../assets/carousel2.jpeg";
-import imageThree from "../../../assets/carousel3.jpeg";
-import imageFour from "../../../assets/carousel4.jpeg";
-import imageFive from "../../../assets/carousel5.jpeg";
-
 const sliderImages = [
   {
-    image: imageOne,
+    image: "./images/carousel1.jpeg",
     heading: "House equipment",
     subtext: "Upgrade your house equipment",
     price: "999.99",
     link: "!#",
   },
   {
-    image: imageTwo,
+    image: "./images/carousel2.jpeg",
     heading: "Kitchen Luxuries",
     subtext: "Improve your kitchen needs",
     price: "899.99",
     link: "!#",
   },
   {
-    image: imageThree,
+    image: "./images/carousel3.jpeg",
     heading: "Mens Cologne",
     subtext: "Smell the best you have had ever smelt",
     price: "799.99",
     link: "!#",
   },
   {
-    image: imageFour,
+    image: "./images/carousel4.jpeg",
     heading: "Skincare for Woman",
     subtext: "Get the softest skin today",
     price: "699.99",
     link: "!#",
   },
   {
-    image: imageFive,
+    image: "./images/carousel5.jpeg",
     heading: "Epilators",
     subtext: "Remove unwanted hair within seconds",
     price: "599.99",
