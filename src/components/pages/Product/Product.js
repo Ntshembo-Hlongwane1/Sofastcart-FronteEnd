@@ -13,7 +13,7 @@ import Spinner from "../../layout/Spinner/Spinner";
 import products from "../../../assets/productData";
 
 const Product = ({ match }) => {
-  const productId = match.params.productId - 1;
+  const productId = match.params.productId && match.params.productId - 1;
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
