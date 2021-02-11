@@ -59,7 +59,7 @@
 .bottom-header__alldepartments {
   background-color: var(--primary-color);
   padding: 10px 20px;
-  color: var(--tertiary-color);
+  color: var(--light-color);
   transition: all 0.2s ease-in-out;
   position: relative;
   cursor: pointer;

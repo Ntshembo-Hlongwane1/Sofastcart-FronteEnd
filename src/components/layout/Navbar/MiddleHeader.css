@@ -33,12 +33,12 @@
   font-size: 1.5rem;
   margin-right: 1rem;
   cursor: pointer;
+  color: var(--light-color);
 }
 
 .middle-header__mobile-searchicon {
   display: none;
   font-size: 1.3rem;
-  margin-right: 1rem;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
@@ -46,6 +46,7 @@
 
 .middle-header__mobile-searchicon i {
   cursor: pointer;
+  color: var(--light-color);
 }
 
 .middle-header__mobile-searchbar {
@@ -124,6 +125,11 @@
   flex: 0.25;
 }
 
+.middle-header__icons i,
+.middle-header__icons .middle-header__cartprice {
+  color: var(--tertiary-color);
+}
+
 .middle-header__searchbar {
   flex: 0.5;
   position: relative;
@@ -155,7 +161,7 @@
   padding: 10px 20px;
   display: block;
   text-decoration: none;
-  color: var(--tertiary-color);
+  color: var(--light-color);
 }
 
 .middle-header__search-result-list li a:hover {
@@ -167,11 +173,11 @@
   font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: -3px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .middle-header__logo-dark {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 .middle-header__searchbar form {
@@ -209,7 +215,7 @@
 
 .middle-header__searchbar form button i {
   font-size: 18px;
-  color: var(--tertiary-color);
+  color: var(--light-color);
 }
 
 .middle-header__icons ul {
@@ -224,7 +230,7 @@
 }
 
 .middle-header__icons ul li a {
-  color: var(--tertiary-color);
+  color: var(--light-color);
   font-weight: 700;
   text-decoration: none;
 }
@@ -300,12 +306,22 @@
     display: block;
   }
 
+  .middle-header__logo-dark {
+    color: var(--light-color);
+  }
+
   .middle-header__logo a {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
   }
 
   .middle-header__mobile-searchicon {
     display: flex;
+  }
+
+  .middle-header__cartprice {
+    color: var(--light-color);
+    font-size: 0.7rem;
+    margin-left: 8px;
   }
 
   .middle-header__mobile-searchbar {
@@ -327,11 +343,11 @@
   }
 
   .middle-header__logo a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .middle-header__mobile-searchicon {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .middle-header__mobile-shoppingbag img {

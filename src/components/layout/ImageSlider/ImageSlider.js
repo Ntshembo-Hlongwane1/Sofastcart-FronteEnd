@@ -85,7 +85,7 @@ const ImageSlider = () => {
               <h3 className="imageslider__item-heading">{el.heading}</h3>
               <p className="imageslider__item-subtext">{el.subtext}</p>
               <p className="imageslider__item-price">Rs {el.price}</p>
-              <button className="imageslider__item-shopnow">Shop Now</button>
+              <button className="btn btn-primary">Shop Now</button>
             </div>
             <img
               className="imageslider__image"

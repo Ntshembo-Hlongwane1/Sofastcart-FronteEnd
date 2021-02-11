@@ -64,7 +64,7 @@
 }
 
 .aboutus__hiring-cricle {
-  background-color: #fed700;
+  background-color: var(--success-color);
   width: 170px;
   height: 185.44px;
   border-radius: 50%;

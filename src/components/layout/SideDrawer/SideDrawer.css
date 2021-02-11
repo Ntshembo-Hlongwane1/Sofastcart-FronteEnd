@@ -47,7 +47,7 @@
 
 .sidedrawer__icons li a {
   padding: 10px 20px;
-  color: var(--tertiary-color);
+  color: var(--light-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +55,7 @@
 }
 
 .sidedrawer__icons li:not(:first-child) {
-  border-left: 1px solid rgba(51, 62, 72, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidedrawer__countryflag img {
@@ -74,14 +74,14 @@
 .sidedrawer__contactinfo li {
   width: 100%;
   text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidedrawer__contactinfo li a {
   display: flex;
   flex-direction: column;
-
   text-decoration: none;
-  color: var(--tertiary-color);
+  color: var(--light-color);
 }
 
 .sidedrawer__contactinfo li a i {
@@ -141,7 +141,7 @@
   display: block;
   width: 100%;
   background-color: var(--primary-color);
-  color: var(--tertiary-color);
+  color: var(--light-color);
   font-size: 1rem;
   display: flex;
   align-items: center;

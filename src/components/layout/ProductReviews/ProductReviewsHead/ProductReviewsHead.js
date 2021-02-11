@@ -17,7 +17,7 @@ const ProductReviewsHead = ({ value, numReviews, toggleForm, toggleValue }) => {
         </div>
 
         <button
-          className="productReviewsHead__writeReviewBtn"
+          className="btn btn-primary"
           onClick={() => toggleForm((prev) => !prev)}
         >
           {!toggleValue ? "Write a review" : "Close review"}

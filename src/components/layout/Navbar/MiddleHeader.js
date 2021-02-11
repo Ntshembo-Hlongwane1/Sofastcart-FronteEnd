@@ -47,7 +47,7 @@ const MiddleHeader = ({ clicked }) => {
         </div>
         <div className="middle-header__logo">
           <Link to="/">
-            <span className="middle-header__logo-dark">Sofast</span>Cart
+            <span className="middle-header__logo-dark">Workshop</span>Supply
             <span className="middle-header__logo-dot">.</span>
           </Link>
         </div>
@@ -62,7 +62,7 @@ const MiddleHeader = ({ clicked }) => {
           <div>
             <a className="middle-header__mobile-shoppingbag" href="!#">
               <div className="icon-badge__container">
-                <img src={shoppingbag} alt="shopping bag icons" />
+                <i className="fas fa-shopping-bag"></i>
                 <span className="icon-badge">0</span>
               </div>
               <span className="middle-header__cartprice">$0.00</span>

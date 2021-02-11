@@ -47,9 +47,9 @@ const SideDrawer = ({ show, bgClicked }) => {
               <li>
                 <a href="!#" className="sidedrawer__countryflag">
                   <ReactCountryFlag
-                    countryCode="PK"
+                    countryCode="ZA"
                     svg
-                    title="Pakistan"
+                    title="South Africa"
                     style={{ width: "100%", height: "100%" }}
                   />
                 </a>

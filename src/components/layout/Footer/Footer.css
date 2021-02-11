@@ -182,6 +182,7 @@
 .footer__newsletter-heading {
   display: flex;
   align-items: center;
+  color: var(--light-color);
 }
 
 .footer__newsletter-heading span {
@@ -194,6 +195,7 @@
 }
 
 .footer__newsletter-subtext {
+  color: var(--light-color);
   font-size: 0.8rem;
 }
 

@@ -40,7 +40,7 @@ const TopHeader = () => {
             <li>
               <div className="top-header__countryflag">
                 <ReactCountryFlag
-                  countryCode="PK"
+                  countryCode="ZA"
                   svg
                   title="Pakistan"
                   style={{ width: "100%", height: "100%" }}

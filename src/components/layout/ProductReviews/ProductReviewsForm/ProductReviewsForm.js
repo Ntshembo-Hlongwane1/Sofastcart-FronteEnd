@@ -72,7 +72,7 @@ const ProductReviewsForm = () => {
           </div>
 
           <div className="productReviewsForm__submitReview">
-            <button>Submit Review</button>
+            <button className="btn btn-primary">Submit Review</button>
           </div>
         </form>
       </div>

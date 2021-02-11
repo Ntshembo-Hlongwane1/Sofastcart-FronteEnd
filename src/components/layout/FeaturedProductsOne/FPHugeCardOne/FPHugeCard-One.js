@@ -42,7 +42,7 @@ const HugeProductCard = ({ product }) => {
           <p className="hugeproductcard__oldprice">Rs 799.00</p>
         </div>
         <button
-          className="hugeproductcard__cartbutton"
+          className="btn btn-primary"
           onClick={(e) => {
             e.stopPropagation();
             console.log("Clicked Cart");

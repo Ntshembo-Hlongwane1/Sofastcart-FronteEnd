@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="footer__gridItem contactInfo">
               <div className="footer__logo-container">
                 <Link to="/">
-                  <span className="footer__logo">Sofast</span>Cart.
+                  <span className="footer__logo">Workshop</span>Supply
                 </Link>
               </div>
 

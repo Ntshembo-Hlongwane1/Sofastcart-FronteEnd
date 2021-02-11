@@ -33,7 +33,7 @@
 }
 
 .productReviewsHead__writeReviewBtn {
-  color: var(--tertiary-color);
+  color: var(--light-color);
   padding: 15px 30px;
   border-radius: 25px;
   font-weight: 700;

@@ -42,7 +42,10 @@ const Product = ({ match }) => {
             <ProductReviews reviews={product.reviews} />
           </div>
 
-          <ProductsCarousel catagoryName="Related items" />
+          <ProductsCarousel
+            catagoryName="Related items"
+            products={Products.reverse()}
+          />
         </>
       )}
     </div>

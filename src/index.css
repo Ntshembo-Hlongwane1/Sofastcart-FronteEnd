@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 :root {
-  --primary-color: #fed700;
-  --secondary-color: #0c68c0;
+  --primary-color: #042e54;
+  --secondary-color: #0e8a54;
   --tertiary-color: #333e48;
   --info-color: #117aff;
-  --sucess-color: #4bd964;
+  --success-color: #4bd964;
   --danger-color: #ee1d00;
   --light-color: #efefef;
 }
@@ -36,7 +36,7 @@ img {
 }
 
 .btn {
-  min-width: 130px;
+  min-width: 150px;
   padding: 14px 30px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
@@ -46,20 +46,33 @@ img {
   margin: 0 10px 0 0;
   border: none;
   cursor: pointer;
+  outline-width: 0;
 }
 
 .btn-primary {
   background: var(--primary-color);
+  color: var(--light-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+  margin: 13px 0;
 }
 
 .btn-light {
   background: var(--light-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .btn-primary:hover,
 .btn-light:hover {
   background-color: var(--tertiary-color);
   color: var(--light-color);
+  border: 1px solid var(--tertiary-color);
+  font-size: 0.72rem;
 }
 
 .row {

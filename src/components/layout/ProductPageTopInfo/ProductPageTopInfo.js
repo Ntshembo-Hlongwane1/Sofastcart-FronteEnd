@@ -37,7 +37,7 @@ const ProductPageTopInfo = ({ product }) => {
               className="productPageTopInfo__thumbnail"
               key={idx}
               style={
-                imageIdx === idx ? { borderBottom: "2px solid #fed700" } : null
+                imageIdx === idx ? { borderBottom: "2px solid #042e54" } : null
               }
               onClick={() => setImageIdx(idx)}
             >
@@ -134,7 +134,7 @@ const ProductPageTopInfo = ({ product }) => {
             </div>
           </div>
 
-          <button className="productPageTopInfo__addCartBtn">
+          <button className="btn btn-primary btn-block">
             <i className="fas fa-shopping-cart"></i>
             <span>Add to cart</span>
           </button>

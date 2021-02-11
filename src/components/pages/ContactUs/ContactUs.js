@@ -60,7 +60,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <button type="submit" className="contactus__formSubmit">
+            <button type="submit" className="btn btn-primary">
               Send Message
             </button>
           </form>
