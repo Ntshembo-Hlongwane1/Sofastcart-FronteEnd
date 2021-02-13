@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 :root {
-  --primary-color: #042e54;
+  --primary-color: #fed700;
   --secondary-color: #0e8a54;
   --tertiary-color: #333e48;
   --info-color: #117aff;
@@ -112,6 +112,11 @@ img {
 .rec-dot_active {
   background-color: rgba(0, 0, 0, 0.5) !important;
   box-shadow: 0 0 1px 3px var(--tertiary-color) !important;
+}
+
+.cart_summary{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  height: 250px;
 }
 
 input::-webkit-outer-spin-button,

@@ -15,6 +15,7 @@ import AboutUs from "./components/pages/AboutUs/AboutUs";
 import ContactUs from "./components/pages/ContactUs/ContactUs";
 import StoreLocation from "./components/pages/StoreLocation/StoreLocation";
 import Wishlist from "./components/pages/Wishlist/Wishlist";
+import { Cart } from './components/pages/Cart'
 
 const App = () => {
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -31,6 +32,7 @@ const App = () => {
 
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/shopping-cart" component={Cart}/>
           <Route exact path="/account" component={Account} />
           <Route exact path="/product/:productId" component={Product} />
           <Route exact path="/about-us" component={AboutUs} />

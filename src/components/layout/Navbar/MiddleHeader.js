@@ -47,8 +47,18 @@ const MiddleHeader = ({ clicked }) => {
         </div>
         <div className="middle-header__logo">
           <Link to="/">
-            <span className="middle-header__logo-dark">Workshop</span>Supply
-            <span className="middle-header__logo-dot">.</span>
+            <span
+              style={{ color: "black" }}
+              className="middle-header__logo-dark"
+            >
+              Sofast
+            </span>
+            <span
+              style={{ color: "#fed700" }}
+              className="middle-header__logo-dot"
+            >
+              Cart.
+            </span>
           </Link>
         </div>
 

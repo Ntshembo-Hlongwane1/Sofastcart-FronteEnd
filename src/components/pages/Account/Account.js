@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Account.css";
+import axios from 'axios';
+import {useHistory} from 'react-router-dom'
 
 // Components
 import Breadcrumb from "../../layout/Breadcrumb/Breadcrumb";
@@ -10,6 +12,78 @@ const pageRoute = [{ title: "Account", link: "/account" }];
 
 const Account = () => {
   const [showforgotPassword, setShowForgotPassword] = useState(false);
+
+  const [username_login, setUsernameLogin] = useState("");
+  const [password_login, setPasswordLogin] = useState("");
+
+  const [username_signup, setUsernameSignUp] = useState("");
+  const [email_signup, setEmailSignup] = useState("");
+  const [password_signup, setPasswordSignup] = useState("")
+
+  const history = useHistory()
+
+  const handleLoginChange = (e)=>{
+    switch(e.target.id){
+      case "username_login":
+        setUsernameLogin(e.target.value);
+        break;
+      case "password_login":
+        setPasswordLogin(e.target.value);
+        break
+      default:
+        break;
+    }
+  }
+
+  const handleSignupChange = (e)=>{
+    switch(e.target.id){
+      case "username_signup":
+        setUsernameSignUp(e.target.value);
+        break;
+      case "password_signup":
+        setPasswordSignup(e.target.value);
+        break
+      case "email_signup":
+        setEmailSignup(e.target.value)
+      default:
+        break;
+    }
+  }
+
+  const LoginUser = (e)=>{
+    const url ="https://sofast-cart-api.herokuapp.com/api/user-signin"
+    e.preventDefault();
+    const form_data = new FormData();
+    form_data.append('username', username_login);
+    form_data.append('password', password_login);
+
+    axios.post(url, form_data).then(res=>{
+      localStorage.setItem('token', res.data.authToken);
+      history.push('/')
+    }).catch(err=>{
+      alert(err.response.data.msg)
+    })
+
+  }
+
+  const SignupUser = (e)=>{
+    e.preventDefault();
+    const url = "https://sofast-cart-api.herokuapp.com/api/user-signup";
+
+    const form_data = new FormData();
+    form_data.append('email', email_signup);
+    form_data.append('password', password_signup);
+    form_data.append('verifiedPassword', password_signup);
+    form_data.append('username', username_signup)
+    axios.post(url, form_data).then(res=>{
+      localStorage.setItem('token', res.data.authToken);
+      history.push('/')
+    }).catch(err=>{
+      alert(err.response.data.msg)
+    })
+
+  }
+
   return (
     <div className="account">
       <Breadcrumb route={pageRoute} />
@@ -20,16 +94,17 @@ const Account = () => {
               <h3 className="account__form-header">Login</h3>
               <p>Welcome back Sigin in to your account</p>
               <div className="form-control">
-                <label htmlFor="email">Email Address</label>
-                <input type="email" required id="email" />
+                <label htmlFor="username_login">Username</label>
+                <input onChange={handleLoginChange} id="username_login" type="text" required  />
               </div>
               <div className="form-control">
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   required
-                  id="password"
+                  id="password_login"
                   autoComplete="true"
+                  onChange={handleLoginChange}
                 />
               </div>
               <div className="account__forgotpassword">
@@ -38,7 +113,7 @@ const Account = () => {
                   Forgotten Password?
                 </button>
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button onClick={LoginUser} type="submit" className="btn btn-primary">
                 Login
               </button>
             </form>
@@ -69,27 +144,24 @@ const Account = () => {
             <h3 className="account__form-header">Create New Account</h3>
             <p>Create your own Account</p>
             <div className="form-control">
-              <label htmlFor="name">First Name</label>
-              <input type="text" required id="name" />
-            </div>
-            <div className="form-control">
-              <label htmlFor="surname">Last Name</label>
-              <input type="text" required id="surname" />
+              <label htmlFor="name">Username</label>
+              <input onChange={handleSignupChange} id="username_signup" type="text" required  />
             </div>
             <div className="form-control">
               <label htmlFor="register-email">Email Address</label>
-              <input type="email" required id="register-email" />
+              <input type="email" required id="email_signup"  onChange={handleSignupChange}/>
             </div>
             <div className="form-control">
               <label htmlFor="register-password">Password</label>
               <input
                 type="password"
                 required
-                id="register-password"
+                id="password_signup"
                 autoComplete="true"
+                onChange={handleSignupChange}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button onClick={SignupUser} type="submit" className="btn btn-primary">
               Register
             </button>
           </form>
